@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Collection Femme</title>
+        <title>Accueil</title>
     </head>  
     <body>
         <form>
@@ -24,8 +24,20 @@
             <label for="site-search">Search the site :</label>
             <input type="recherche" id="site-search" name="recherche">
         </div>
-        <h1>Femme</h1>    
+        <form action="Control_accueil.php" method="post">
+            <p>
+                <input type="radio" name="connexion" value="connexion" />
+                Connexion
+            </p>
+            <p>
+                <input type="radio" name="inscription" value="s'incrire" />
+                S'inscrire
+            </P>
+            <p>   
+                <input type="submit" name="validation" value="Valider" />
+            </p>    
 
+                
                 
     </body>
 </html>
