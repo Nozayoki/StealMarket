@@ -26,6 +26,18 @@
         <a href="View_homme.php"><img src="vetement_homme.jpg"/>
     
         <a href="View_femme.php"><img src="vetement_femme.jpg"/> <br>
+
+        <form action="Control_accueil.php" method="post">
+            <p>
+                <input type="radio" name="connexion" value="connexion" />
+                Connexion
+            </p>
+            <p>
+                <input type="radio" name="inscription" value="s'incrire" />
+                S'inscrire
+            </p>
+                <input type="submit" name="validation" value="Valider" />
+        </form>    
     </body>
 
 </html>
