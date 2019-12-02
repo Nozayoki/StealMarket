@@ -5,10 +5,11 @@ if(isset($_POST['articles_titre'], $_POST['articles_prix'])) {
     if(!empty($_POST['articles_titre']) && !empty($_POST['articles_prix'])) {
         $articles_titre = htmlspecialchars($_POST['articles_titre']);
         $articles_prix = htmlspecialchars($_POST['articles_prix']);
+        $article_stock = htmlspecialchars($_POST['articles_stock']);
 
-        $insertion = $bdd->prepare('INSERT INTO articles(articles, prix)
-            VALUES (?,?)');
-        $insertion->execute(array($articles_titre, $articles_prix));//*/
+        $insertion = $bdd->prepare('INSERT INTO articles(articles, prix, stock)
+            VALUES (?,?,?)');
+        $insertion->execute(array($articles_titre, $articles_prix, $article_stock));//*/
         /*$insertion = $bdd->query("INSERT INTO articles(articles, prix)
             VALUES ($articles_titre, $articles_prix)");*/
         $message = 'Votre article a bien été ajouter';
@@ -47,8 +48,9 @@ if(isset($_POST['articles_titre'], $_POST['articles_prix'])) {
         </div>
         <h1>Femme</h1>    
         <form method="POST">
-            <input type="text" name="articles_titre" placeholder="articles" /><br/>
-            <textarea name="articles_prix" placeholder="prix"></textarea><br />
+        <textarea name="articles_titre" placeholder="nom de l'article"></textarea><br />
+            <input type="text" name="articles_prix" placeholder="prix" /><br/>
+            <input type="text" name="articles_stock" placeholder="quantité" /><br/>
             <input type="submit" value="Envoyer l'article" />
         </form>
         <br/>
