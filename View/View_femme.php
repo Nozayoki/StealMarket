@@ -28,29 +28,32 @@ if(isset($_POST['articles_titre'], $_POST['articles_prix'])) {
     <body>
         <form>
             <input type="button" value="Indumentis">
-        </form>
+    </form>
         <form>
-            <input type="button" value="Collection Homme">
+          <input type="button" value="Collection Homme">
         </form>
         <form>
             <input type="button" value="Collection Femme">
-        </form>
+    </form>
         <form>
             <input type="button" value="Accessoire">
-        </form>
+    </form>
         <form>
             <input type="button" value="En savoir plus">
-        </form>
+    </form>
         <div id="recherche">
             <label for="site-search">Search the site :</label>
             <input type="recherche" id="site-search" name="recherche">
         </div>
-        <h1>Femme</h1>    
+    <h1>Femme</h1>    
         <form method="POST">
             <input type="text" name="articles_titre" placeholder="articles" /><br/>
             <textarea name="articles_prix" placeholder="prix"></textarea><br />
             <input type="submit" value="Envoyer l'article" />
         </form>
+        <form action="Control_.php" method="post">
+            <input type="submit" value="Supprimer l'article" />
+        </form>    
         <br/>
         <?php if(isset($message)) {echo $message; }
         ?>
