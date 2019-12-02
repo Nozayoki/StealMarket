@@ -87,6 +87,6 @@
                }//}
         ?>
 
-        <a href="http://localhost/eval_mi_semestre_elio.php">Retour acceuil</a> <br>   
+        <a href="acceuil_stealmarket.php">Retour acceuil</a> <br>   
     </body> 
 </html>    
