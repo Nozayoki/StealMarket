@@ -1,7 +1,9 @@
 <?php
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=stealmarket;charset=utf8", "root", ""); 
-
-if(isset($_POST['articles_titre'], $_POST['articles_prix'])) {
+if(isset($_GET['articles_titre_suppr'])){
+    $articles_titre_suppr = $_GET['articles_titre_suppr'];
+    $suppression = $bdd->query("DELETE FROM articles WHERE articles = '$articles_titre_suppr'");
+} else if(isset($_POST['articles_titre'], $_POST['articles_prix'])) {
     if(!empty($_POST['articles_titre']) && !empty($_POST['articles_prix'])) {
         $articles_titre = htmlspecialchars($_POST['articles_titre']);
         $articles_prix = htmlspecialchars($_POST['articles_prix']);
@@ -54,6 +56,11 @@ if(isset($_POST['articles_titre'], $_POST['articles_prix'])) {
             <input type="submit" value="Envoyer l'article" />
         </form>
         <br/>
+        <form method="GET">
+        veuillez entrer le nom de l'article à supprimer : <br>
+        <input type="text" name="articles_titre_suppr"/><br/>
+        <input type="submit" value="supprimer l'article" />
+        </form>
         <?php if(isset($message)) {echo $message; }
         ?>
                 
