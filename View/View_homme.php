@@ -29,26 +29,22 @@ if(isset($_GET['articles_titre_suppr'])){
         <title>Collection Homme</title>
     </head>  
     <body>
-        <form>
-            <input type="button" value="Indumentis">
-    </form>
-        <form>
-          <input type="button" value="Collection Homme">
-        </form>
-        <form>
-            <input type="button" value="Collection Femme">
-    </form>
-        <form>
-            <input type="button" value="Accessoire">
-    </form>
+       
+        <a href="View_acceuil_stealmarket.php">INDUMENTIS</a> 
+        
+        <a href="View_homme.php">Collection Homme</a> 
+        
+        <a href="View_femme.php">Collection Femme</a> 
+        
+        <a href="View_accessoire.html">Accessoire</a> 
         <form>
             <input type="button" value="En savoir plus">
-    </form>
+        </form>
         <div id="recherche">
             <label for="site-search">Search the site :</label>
             <input type="recherche" id="site-search" name="recherche">
         </div>
-    <h1>Homme</h1>    
+        <h1>homme</h1>    
         <form method="POST">
         <textarea name="articles_titre" placeholder="nom de l'article"></textarea><br />
             <input type="text" name="articles_prix" placeholder="prix" /><br/>

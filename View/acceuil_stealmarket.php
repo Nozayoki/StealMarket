@@ -7,13 +7,13 @@
 
     <body>
        
-        <a href="acceuil_stealmarket.php">INDUMENTIS</a> 
+        <a href="View_acceuil_stealmarket.php">INDUMENTIS</a> 
         
         <a href="View_homme.php">Collection Homme</a> 
         
         <a href="View_femme.php">Collection Femme</a> 
         
-        <a href="View_accessoire.php">Accessoire</a> 
+        <a href="View_accessoire.html">Accessoire</a> 
         
         <a href="contact.php">En savoir plus</a> 
 
