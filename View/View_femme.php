@@ -31,30 +31,33 @@ if(isset($_GET['articles_titre_suppr'])){
     <body>
         <form>
             <input type="button" value="Indumentis">
-        </form>
+    </form>
         <form>
-            <input type="button" value="Collection Homme">
+          <input type="button" value="Collection Homme">
         </form>
         <form>
             <input type="button" value="Collection Femme">
-        </form>
+    </form>
         <form>
             <input type="button" value="Accessoire">
-        </form>
+    </form>
         <form>
             <input type="button" value="En savoir plus">
-        </form>
+    </form>
         <div id="recherche">
             <label for="site-search">Search the site :</label>
             <input type="recherche" id="site-search" name="recherche">
         </div>
-        <h1>Femme</h1>    
+    <h1>Femme</h1>    
         <form method="POST">
         <textarea name="articles_titre" placeholder="nom de l'article"></textarea><br />
             <input type="text" name="articles_prix" placeholder="prix" /><br/>
             <input type="text" name="articles_stock" placeholder="quantité" /><br/>
             <input type="submit" value="Envoyer l'article" />
         </form>
+        <form action="Control_.php" method="post">
+            <input type="submit" value="Supprimer l'article" />
+        </form>    
         <br/>
         <form method="GET">
         veuillez entrer le nom de l'article à supprimer : <br>
