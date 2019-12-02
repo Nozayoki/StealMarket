@@ -19,7 +19,7 @@
 
         <a href="recherche.html"><img src="Image/loupe.png"/>
         
-        <a href="inscription_steal.php"><img src="Image/engrenage.jpg"/>
+        <a href="View_inscription_steal.php"><img src="Image/engrenage.jpg"/>
 
         <a href="panier_steal.php"><img src="Image/caddie.jpg"/> <br> <br>
 

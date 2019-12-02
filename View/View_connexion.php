@@ -17,6 +17,6 @@
         }
     
         ?>
-    
+    <a href="View_acceuil_stealmarket.php">Retour acceuil</a> <br> 
     </body> 
 </html>    
