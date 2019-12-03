@@ -80,7 +80,17 @@
           
             } else  /*if (isset($bdd))*/ {
                $bdd = new PDO("mysql:host=localhost;dbname=stealmarket","root","");
-               /*if(!(*/try {/*$reponse =*/ $bdd->query("INSERT INTO utilisateurs(adresse_mail, mdp, prenom, nom, adresse, complement, code_postal, ville, pays, telephone) VALUES (\'".$_GET['adresse_mail']."','".$_GET['mdp']."','".$_GET['prenom']."','".$_GET['nom']."','".$_GET['adresse']."''".$_GET['complement']."','".$_GET['code_postal']."','".$_GET['ville']."','".$_GET['pays']."','".$_GET['telephone']."\');");//))
+               $a=$_GET["adresse_mail"];
+               $b=$_GET["mdp"];
+               $c=$_GET["prenom"];
+               $d=$_GET["nom"];
+               $e=$_GET["adresse"];
+               $f=$_GET["complement"];
+               $g=$_GET["code_postal"];
+               $h=$_GET["ville"];
+               $i=$_GET["pays"];
+               $j=$_GET["telephone"];
+               /*if(!(*/try {/*$reponse =*/ $bdd->query("INSERT INTO utilisateurs(adresse_mail, mdp, prenom, nom, adresse, complement, code_postal, ville, pays, telephone) VALUES ('$a','$b','$c','$d','$e','$f','$g','$h','$i','$j');");//.$_GET['adresse_mail'].",'".$_GET['mdp']."','".$_GET['prenom']."','".$_GET['nom']."','".$_GET['adresse']."','".$_GET['complement']."',".$_GET['code_postal'].",'".$_GET['ville']."','".$_GET['pays']."',".$_GET['telephone'].");");//))
                    //echo'échec';
                //else {
                }catch(Exception $e){
