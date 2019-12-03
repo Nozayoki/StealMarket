@@ -18,7 +18,7 @@
         
         <a href="View_femme.php">Collection Femme</a> 
         
-        <a href="View_accessoire.php">Accessoire</a> 
+        <a href="View_accessoire.html">Accessoire</a> 
         
         <a href="contact.php">En savoir plus</a> 
         
