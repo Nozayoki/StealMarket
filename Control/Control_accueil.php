@@ -1,5 +1,5 @@
 <?php
-  if ($_POST["connexion"] == "connexion") {
+  if (isset($_POST["connexion"])) {
   include("../View/View_connexion.php");
   }
   else {

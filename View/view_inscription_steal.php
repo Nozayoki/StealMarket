@@ -10,7 +10,7 @@
         <?php
             if(!isset($_GET['adresse_mail']) && !isset($_GET['mdp']) && !isset($_GET['prenom']) && !isset($_GET['nom']) && !isset($_GET['adresse']) && !isset($_GET['complement']) && !isset($_GET['code_postal']) && !isset($_GET['ville']) && !isset($_GET['pays']) && !isset($_GET['telephone'])){
                 echo'
-                <form method="GET" action="view_inscription_steal.php">
+                <form method="GET" action="../View/view_inscription_steal.php">
                 Coordonnées: <br>
                 <input type="text" name="adresse_mail" placeholder="Adresse email">
                 <input type="text" name="mdp" placeholder="Mot de passe"><br>
@@ -80,15 +80,20 @@
           
             } else  /*if (isset($bdd))*/ {
                $bdd = new PDO("mysql:host=localhost;dbname=stealmarket","root","");
-               /*if(!(*/$reponse = $bdd->query("INSERT INTO utilisateurs(adresse_mail, mdp, prenom, nom, adresse, complement, code_postal, ville, pays, telephone) VALUE('".$_GET['adresse_mail']."','".$_GET['mdp']."','".$_GET['prenom']."','".$_GET['nom']."','".$_GET['adresse']."''".$_GET['complement']."','".$_GET['code_postal']."','".$_GET['ville']."','".$_GET['pays']."','".$_GET['telephone']."')");//))
+               /*if(!(*/try {/*$reponse =*/ $bdd->query("INSERT INTO utilisateurs(adresse_mail, mdp, prenom, nom, adresse, complement, code_postal, ville, pays, telephone) VALUES (\'".$_GET['adresse_mail']."','".$_GET['mdp']."','".$_GET['prenom']."','".$_GET['nom']."','".$_GET['adresse']."''".$_GET['complement']."','".$_GET['code_postal']."','".$_GET['ville']."','".$_GET['pays']."','".$_GET['telephone']."\');");//))
                    //echo'échec';
                //else {
+               }catch(Exception $e){
+                print_r($e);
+
+               }
                echo'
                Félicitation ! Vous êtes maintenant inscrit sur Indumentis <br>
                Cliquez sur le lien ci-dessous pour revenir à la page d\'acceuil <br> ';
                }//}
         ?>
 
-        <a href="../View/View_accueil_stealmarket.php">Retour acceuil</a> <br>   
+        <a href="../View/View_accueil_stealmarket.php">Retour accueil</a> <br>   
     </body> 
-</html>    
+</html>
+   
