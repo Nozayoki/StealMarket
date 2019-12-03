@@ -89,6 +89,6 @@
                }//}
         ?>
 
-        <a href="../View/View_acceuil_stealmarket.php">Retour acceuil</a> <br>   
+        <a href="../View/View_accueil_stealmarket.php">Retour acceuil</a> <br>   
     </body> 
 </html>    

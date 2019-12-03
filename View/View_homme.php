@@ -30,7 +30,7 @@ if(isset($_GET['articles_titre_suppr'])){
     </head>  
     <body>
        
-        <a href="../View/View_acceuil_stealmarket.php">INDUMENTIS</a> 
+        <a href="../View/View_accueil_stealmarket.php">INDUMENTIS</a> 
         
         <a href="View_homme.php">Collection Homme</a> 
         
