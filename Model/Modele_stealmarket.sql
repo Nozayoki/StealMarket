@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 30 nov. 2019 à 22:17
--- Version du serveur :  10.4.8-MariaDB
--- Version de PHP :  7.3.10
+-- Généré le :  lun. 09 déc. 2019 à 12:00
+-- Version du serveur :  10.4.6-MariaDB
+-- Version de PHP :  7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,7 +41,10 @@ CREATE TABLE `articles` (
 
 INSERT INTO `articles` (`ID`, `articles`, `prix`, `stock`) VALUES
 (1, 'Femme Top Noir', 10, 50),
-(2, 'Femme Robe moulante bo', 10, 150);
+(2, 'Femme Robe moulante bo', 10, 150),
+(6, 'Robe bordeau', 40, 0),
+(10, 'femme pull bleu', 15, 0),
+(9, 'Femme robe verte', 58, 0);
 
 -- --------------------------------------------------------
 
@@ -104,10 +107,61 @@ CREATE TABLE `utilisateurs` (
   `ID` int(11) NOT NULL,
   `nom` varchar(45) NOT NULL,
   `prenom` varchar(45) NOT NULL,
-  `fonction` varchar(45) NOT NULL,
-  `compte` varchar(45) NOT NULL,
-  `mdp` varchar(45) NOT NULL
+  `fonction` varchar(45) NOT NULL DEFAULT 'utilisateur',
+  `mdp` varchar(45) NOT NULL,
+  `adresse_mail` varchar(50) NOT NULL,
+  `adresse` varchar(50) NOT NULL,
+  `code_postal` int(11) NOT NULL,
+  `ville` varchar(50) NOT NULL,
+  `pays` varchar(50) NOT NULL,
+  `complement` varchar(50) NOT NULL,
+  `telephone` bigint(35) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`ID`, `nom`, `prenom`, `fonction`, `mdp`, `adresse_mail`, `adresse`, `code_postal`, `ville`, `pays`, `complement`, `telephone`) VALUES
+(1, 'mpassy', 'william', '', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647),
+(2, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647),
+(3, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647),
+(4, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 6650657755),
+(5, 'mpassy', 'william', 'utilisateur', 'Xaaaa', 'iExterminity@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '13', 665065731),
+(6, 'mpassy', 'william', 'utilisateur', 'Zaaa', 'iExterminity@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '13', 665065731),
+(7, 'renÃ©e louis', 'thylane', 'utilisateur', 'Xaaaa', 'po@.fr', '13 rue du Cognassier', 91, 'vigneux-sur-seine', 'france', '3', 3240);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `utilisateurs`
+--
+ALTER TABLE `utilisateurs`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT pour la table `utilisateurs`
+--
+ALTER TABLE `utilisateurs`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
