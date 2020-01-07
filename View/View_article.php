@@ -14,5 +14,8 @@ include ("../Control/Control_article.php")
    <h1><?= $contenu ?></h1>
    </p>
    <p><img src="miniatures/<?= $id ?>.jpg" width="400" /><p>
+   <form action='View_homme.php'>
+   <input type='hidden' name='liste' value='on'>
+   <input type='submit' value='Retour'>
 </body>
 </html>

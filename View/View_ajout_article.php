@@ -40,7 +40,18 @@ include ("../Model/Modele_article.php")
             <input type="text" name="articles_prix" placeholder="prix" /><br/>
             <input type="text" name="articles_stock" placeholder="quantité" /><br/>
             <input type="file" name="miniature" /></br>
-            <input type="submit" value="Envoyer l'article" />
+            <?php
+            echo "<form method='POST' enctype='multipart/form-data'>
+    <select name='articles_remplacement'>
+    <option value='yope' selected>Article a modifier</option>";
+    for ($i=0;$i<count($donnees);$i++){
+               echo " <option value=
+    '".$donnees[$i][1]."'>
+    ".$donnees[$i][1]."</option>";
+            
+    }?>     <br>
+            <input type="submit" name="ajouter"  value="Envoyer l'article" />
+            <input type="submit" name="modifier" value="Modifier l'article" />
         </form>
         
         <br/>
