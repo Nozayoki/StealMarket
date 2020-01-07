@@ -22,10 +22,11 @@
         
         <a href="contact.php">En savoir plus</a> 
         
+        
+        
       
         <a href="recherche.html"><img src="Image/loupe.png"></a>
       
-        
         <a href="view_inscription_steal.php"><img src="Image/engrenage.jpg"></a>
 
         <a href="panier_stealmarket.php"><img src="Image/caddie.jpg"></a> <br> <br>
@@ -44,7 +45,8 @@
                 S'inscrire
             </p>
                 <input type="submit" name="validation" value="Valider" />
-        </form>    
+        </form>  
+          
     </body>
 
 </html>

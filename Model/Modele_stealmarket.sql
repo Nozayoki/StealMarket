@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 09 déc. 2019 à 12:00
+-- Généré le :  lun. 06 jan. 2020 à 18:31
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `articles` (
   `ID` int(11) NOT NULL,
-  `articles` varchar(22) NOT NULL,
+  `articles` varchar(50) NOT NULL,
+  `categorie` varchar(30) NOT NULL,
   `prix` int(11) NOT NULL,
   `stock` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -39,12 +40,16 @@ CREATE TABLE `articles` (
 -- Déchargement des données de la table `articles`
 --
 
-INSERT INTO `articles` (`ID`, `articles`, `prix`, `stock`) VALUES
-(1, 'Femme Top Noir', 10, 50),
-(2, 'Femme Robe moulante bo', 10, 150),
-(6, 'Robe bordeau', 40, 0),
-(10, 'femme pull bleu', 15, 0),
-(9, 'Femme robe verte', 58, 0);
+INSERT INTO `articles` (`ID`, `articles`, `categorie`, `prix`, `stock`) VALUES
+(1, 'Femme Top Noir', 'Femme', 10, 50),
+(2, 'Femme Robe moulante bo', 'Femme', 10, 150),
+(6, 'Robe bordeau', 'Femme', 40, 0),
+(10, 'femme pull bleu', 'Femme', 15, 0),
+(9, 'Femme robe verte', 'Femme', 58, 0),
+(16, 'pull homme', '', 50, 46),
+(15, 'Femme jean bleu', '', 25, 3),
+(14, 'Boucle d\'oreille', '', 30, 20),
+(17, 'Robe bleu avec dentell', '', 60, 12);
 
 -- --------------------------------------------------------
 
@@ -155,7 +160,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
