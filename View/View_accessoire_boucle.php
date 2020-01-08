@@ -1,5 +1,5 @@
 <?php
-include ("../Model/Modele_article_femme.php")
+include ("../Model/Modele_article_boucle.php")
 ?>
 <!Doctype html>
 
