@@ -54,7 +54,7 @@
                 <input type="submit" value="Création de compte"><br>
                 </form>';
             
-            }else if (strtolower($_GET['mdp']) == $_GET['mdp'] || strlen($_GET['prenom']) < 2 || strlen($_GET['nom']) < 2 ){ /*penser à mettre un cas pour vérifier que l'adresse mail n'est pas enregistré*/
+            }else if (strtolower($_GET['mdp']) == $_GET['mdp'] || strlen($_GET['prenom']) < 2 || strlen($_GET['nom']) < 2 ||  !preg_match('/[0-9]{10}/',$_GET['telephone']) || strlen($_GET['telephone']) !== 10 || !filter_var($_GET['adresse_mail'],FILTER_VALIDATE_EMAIL)){ /*penser à mettre un cas pour vérifier que l'adresse mail n'est pas enregistré*/
                 echo'
                 erreur un ou plusieurs champ(s) sont incorrect <br> <br>
                 <form method="GET" action="view_inscription_steal.php">
