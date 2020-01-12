@@ -3,13 +3,7 @@
 /*                Fonctions de base de gestion du panier                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/**
-* Ajoute un article dans le panier après vérification que nous ne somme pas en phase de paiement
-*
-* param array  $select variable tableau associatif contenant les valeurs de l'article
-* return Mixed Retourne VRAI si l'ajout est effectué, FAUX sinon voire une autre valeur si l'ajout
-*               est renvoyé vers la modification de quantité.
-*/
+
 function ajout($select)
 {
     $ajout = false;
@@ -31,16 +25,7 @@ function ajout($select)
     return $ajout;
 }
 
-/**
-* Modifie la quantité d'un article dans le panier après vérification que nous ne somme pas en phase de paiement
-*
-* param String $ref_article    Identifiant de l'article à modifier
-* param Int $qte               Nouvelle quantité à enregistrer
-* return Mixed                 Retourne VRAI si la modification a bien eu lieu,
-*                               FAUX sinon,
-*                               "absent" si l'article est absent du panier,
-*                               "qte_ok" si la quantité n'est pas modifiée car déjà correctement enregistrée.
-*/
+
 function modif_qte($ref_article, $qte)
 {
     /* On initialise la variable de retour */
@@ -128,52 +113,10 @@ function supprim_article($ref_article)
 }
 
 /**
-* Supprimer un article du panier : autre méthode.
-*
-* param String     $ref_article numéro de référence de l'article à supprimer
-* param Boolean    $reindex : facultatif, par défaut, vaut true pour ré-indexer le tableau après
-*                   suppression. On peut envoyer false si cette ré-indexation n'est pas nécessaire.
-* return Mixed     Retourne TRUE si la suppression a bien été effectuée,
-*                   FALSE sinon, "absent" si l'article était déjà retiré du panier
-*/
-function supprim_article2($ref_article, $reindex = true)
-{
-    $suppression = false;
-    if(!isset($_SESSION['panier']['verrouille']) || $_SESSION['panier']['verrouille'] == false)
-    {
-        $aCleSuppr = array_keys($_SESSION['panier']['id_article'], $ref_article);
-
-        /* sortie la clé a été trouvée */
-        if (!empty ($aCleSuppr))
-        {
-            /* on traverse le panier pour supprimer ce qui doit l'être */
-            foreach ($_SESSION['panier'] as $k=>$v)
-            {
-                foreach($aCleSuppr as $v1)
-                {
-                    unset($_SESSION['panier'][$k][$v1]);    // remplace la ligne foireuse
-                }
-                /* Réindexation des clés du panier si l'option $reindex a été laissée à true */
-                if($reindex == true)
-                {
-                    $_SESSION['panier'][$k] = array_values($_SESSION['panier'][$k]);
-                }
-                $suppression = true;
-            }
-        }
-        else
-        {
-            $suppression = "absent";
-        }
-    }
-    return $suppression;
-}
-
-/**
 * Fonction qui supprime tout le contenu du panier en détruisant la variable après
 * vérification qu'on ne soit pas en phase de paiement.
 *
-* return Mixed    Retourne VRAI si l'exécution s'est correctement déroulée, Faux sinon et "inexistant" si
+* return   Retourne VRAI si l'exécution s'est correctement déroulée, Faux sinon et "inexistant" si
 *                  le panier avait déjà été détruit ou n'avait jamais été créé.
 */
 function vider_panier()
@@ -202,12 +145,7 @@ function vider_panier()
 /*                 AUTRE FONCTION de gestion du panier                  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/**
-* Vérifie la quantité enregistrée d'un article dans le panier
-*
-* param String $ref_article référence de l'article à vérifier
-* return Mixed Renvoie le nombre d'article s'il y en a, ou Faux si cet article est absent du panier
-*/
+
 function nombre_article($ref_article)
 {
     /* On initialise la variable de retour */
@@ -272,7 +210,7 @@ function preparerPaiement()
 }
 
 /**
-* Fonction qui va enregistrer les informations de la commande dans
+* Fonction qui va enregistrer les informations de la commande dàans
 * la base de données et détruire le panier.
 *
 */
