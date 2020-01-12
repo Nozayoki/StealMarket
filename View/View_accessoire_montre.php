@@ -10,7 +10,7 @@ include ("../Model/Modele_article_montre.php")
     </head>  
     <body>
        
-        <a href="../View/View_accueil_stealmarket.php">INDUMENTIS</a> 
+        <a href="../index.php">INDUMENTIS</a> 
         
         <a href="View_homme.php">Collection Homme</a> 
         

@@ -1,14 +1,13 @@
-<?php
-include ("../Model/Modele_article_bague.php")
-?>
-<!Doctype html>
+<!DOCTYPE html>
 
 <html>
     <head>
-        <title>bague</title>
-    </head>  
+
+        <meta charset="UTF-8">
+        <title>En savoir plus</title>
+    </head>
     <body>
-       
+               
         <a href="../index.php">INDUMENTIS</a> 
         
         <a href="View_homme.php">Collection Homme</a> 
@@ -26,17 +25,15 @@ include ("../Model/Modele_article_bague.php")
             <label for="site-search">Search the site :</label>
             <input type="recherche" id="site-search" name="recherche">
         </div>
-        <h1>Bague</h1>
-        
-        
-        <ul>
-            <?php while($a = $articles->fetch()) { ?>
 
-            <li>
-                <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /><br />
-                <a href="View_article.php?ID=<?= $a['ID'] ?>"><?= $a['articles'] ?></a></li>
-            <?php } ?>
-        <ul>
+        <h1>L'équipe</h1></br>
+        <h3>William Mpassy</h3>
 
+        </br>
+        <h3>Elio Transetti</h3></br>
+
+        <h3>Pierre Sorli</h3></br>
+
+        
     </body>
 </html>
