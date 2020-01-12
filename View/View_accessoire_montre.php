@@ -19,6 +19,8 @@ include ("../Model/Modele_article_montre.php")
         <a href="View_accessoire.html">Accessoire</a> 
 
         <a href="View_ajout_article.php">Ajout article</a>
+
+        <a href="View_contact.html">En savoir plus</a>
         
         <form>
             <input type="button" value="En savoir plus">
