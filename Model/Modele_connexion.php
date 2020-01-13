@@ -16,9 +16,11 @@ $trouve=false;
 for ($i=0;$i<count($donnees);$i++){
     if($donnees[$i][4]===$_GET["adresse_mail"]&&$donnees[$i][5]===$_GET["mdp"]){
         $trouve=true;
+        $reponse2 = $donnees[$i][2];
     }
 }
 if ($trouve){
+    echo "<input type='hidden' name='prenom_connexion' value='$reponse2'>";
     echo "c'est cool";
 }else {echo "pas cool t'existe pas";}
 ?>      
