@@ -1,31 +1,34 @@
 <?php
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=stealmarket;charset=utf8", "root", "");
-echo $_COOKIE["prenom_connexion"];
+//echo $_COOKIE["prenom_connexion"];
 if (isset($_GET["Panier"]) AND isset($_COOKIE["prenom_connexion"])){
    $yu=$_GET["nombre_article"];
    $yu2=htmlspecialchars($_GET["ID"]);
-   echo "/début$yu2/";
+   $titre = $_GET['ID'];
+   $id=$_GET['ID'];
+   
+   //echo "/début$yu2/";
    $yu3=$_COOKIE["prenom_connexion"];
    $abv=$bdd->query("SELECT * FROM articles WHERE ID ='$yu2' ");
    $abv=$abv->fetch();
-   $abv=$abv[0];
-   echo "$abv/";
+   $contenu=$abv[1];
+   //echo "$abv/";
    $abl=$bdd->query("SELECT ID FROM utilisateurs WHERE prenom ='$yu3' ");
    $abl=$abl->fetch();
    $abl=$abl[0];
-   echo "$abl/";
+   //echo "$abl/";
    $abn=$bdd->query("SELECT prix from articles WHERE ID='$yu2'");
    $abn=$abn->fetch();
    
    $abn=$abn[0];
-   echo "$abn/";
+   //echo "$abn/";
    $tot=$abn*$yu;
-   echo "$tot/";
+   //echo "$tot/";
    $bae=$bdd->query("SELECT ID from commandes where ID_utilisateurs='$abl'");
    $bae=$bae->fetch();
    $bae=$bae[0];
-   echo "*$bae";
-   if ($bae==""){echo "yo";
+   //echo "*$bae";
+   if ($bae==""){//echo "yo";
    $bdd->query("INSERT into  commandes (ID_utilisateurs) VALUES('$abl')");}
    else {
       $total=$bdd->query("SELECT total from commandes where ID_utilisateurs='$abl'");
