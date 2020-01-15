@@ -31,7 +31,7 @@
       
         <a href="View/view_inscription_steal.php"><img src="View/Image/engrenage.jpg"></a>
 
-        <a href="panier_stealmarket.php"><img src="View/Image/caddie.jpg"></a> <br> <br>
+        <a href="View_panier.php"><img src="View/Image/caddie.jpg"></a> <br> <br>
 
         <a href="View/View_homme.php"><img src="View/Image/vetement_homme.jpg"></a>
     
@@ -39,14 +39,20 @@
 
         <form action="Control/Control_accueil.php" method="post">
             <p>
-                <input type="radio" name="connexion" value="connexion" />
+                <?php
+                if (!isset($_COOKIE["prenom_connexion"])){
+                echo "<input type='radio' name='connexion' value='connexion' />
                 Connexion
+                
             </p>
             <p>
-                <input type="radio" name="inscription" value="s'incrire" />
+                <input type='radio' name='inscription' value='s'inscrire' />
                 S'inscrire
             </p>
-                <input type="submit" name="validation" value="Valider" />
+                <input type='submit' name='validation' value='Valider' />";}
+                
+                //echo $_COOKIE["prenom_connexion"];
+                ?>
         </form>  
           
     </body>

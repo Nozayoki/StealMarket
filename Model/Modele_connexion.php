@@ -17,15 +17,20 @@ for ($i=0;$i<count($donnees);$i++){
     if($donnees[$i][5]===$_GET["adresse_mail"]&&$donnees[$i][4]===$_GET["mdp"]){
         $trouve=true;
         $reponse2 = $donnees[$i][2];
+        if ($donnees[$i][3]=="administrateur"){
+            $niquetamere=true;
+        }
     }
     
 }
 if ($trouve){
     
     //echo "<input type='hidden' name='prenom_connexion' method='GET' value='$reponse2'>";
-    setcookie("prenom_connexion", $reponse2, time()+3600,"/","index.php");
+    setcookie("prenom_connexion", $reponse2, time()+3600,"/");
     
     echo "c'est cool";
-    header ("location:View_accessoire_bague.php");
+    $aze="View_femme.php";
+    if ($niquetamere){$aze="View_back_end.php";}
+    header ("location:$aze");
 }else {echo "pas cool t'existe pas";}
 ?>      
