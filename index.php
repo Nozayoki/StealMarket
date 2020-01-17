@@ -23,6 +23,8 @@
         <a href="View/View_contact.html">En savoir plus</a>
         
         <a href="View/View_recherche.html">Recherché</a> 
+
+        <a href="View/View_gerer_son_compte.php">gérer son compte</a>
         
         
         
