@@ -40,7 +40,7 @@
         <form action="Control/Control_accueil.php" method="post">
             <p>
                 <?php
-                if (!isset($_COOKIE["prenom_connexion"])){
+                if (!isset($_COOKIE["ID_connexion"])){
                 echo "<input type='radio' name='connexion' value='connexion' />
                 Connexion
                 
@@ -51,7 +51,7 @@
             </p>
                 <input type='submit' name='validation' value='Valider' />";}
                 
-                //echo $_COOKIE["prenom_connexion"];
+                //echo $_COOKIE["ID_connexion"];
                 ?>
         </form>  
           

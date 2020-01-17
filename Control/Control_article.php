@@ -1,14 +1,14 @@
 <?php
 $bdd = new PDO("mysql:host=127.0.0.1;dbname=stealmarket;charset=utf8", "root", "");
-//echo $_COOKIE["prenom_connexion"];
-if (isset($_GET["Panier"]) AND isset($_COOKIE["prenom_connexion"])){
+//echo $_COOKIE["ID_connexion"];
+if (isset($_GET["Panier"]) AND isset($_COOKIE["ID_connexion"])){
    $yu=$_GET["nombre_article"];
    $yu2=htmlspecialchars($_GET["ID"]);
    $titre = $_GET['ID'];
    $id=$_GET['ID'];
    
    //echo "/début$yu2/";
-   $yu3=$_COOKIE["prenom_connexion"];
+   $yu3=$_COOKIE["ID_connexion"];
    $abv=$bdd->query("SELECT * FROM articles WHERE ID ='$yu2' ");
    $abv=$abv->fetch();
    $contenu=$abv[1];
