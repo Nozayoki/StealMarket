@@ -16,7 +16,7 @@ $trouve=false;
 for ($i=0;$i<count($donnees);$i++){
     if($donnees[$i][5]===$_GET["adresse_mail"]&&$donnees[$i][4]===$_GET["mdp"]){
         $trouve=true;
-        $reponse2 = $donnees[$i][2];
+        $reponse2 = $donnees[$i][0];
         if ($donnees[$i][3]=="administrateur"){
             $niquetamere=true;
         }
