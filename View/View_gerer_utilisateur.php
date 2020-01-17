@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <?php
+    <?php
            include ("../Model/Modele_gerer_utilisateur.php")
         ?>
         
@@ -47,22 +47,22 @@
 	    </table>
         
         pour bannir le compte cliquer ici:<br>
-        <form method="GET" action="gerer_utilisateur_stealmarket.php">
-            <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" ></input>
+        <form method="GET" action="View_gerer_utilisateur.php">
+            <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="submit" value="bannir" name='ban'>
         </form>
     
         Pour débannir ce compte cliquer ici:<br>
-        <form method="GET" action="gerer_utilisateur_stealmarket.php">
-            <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" ></input>
+        <form method="GET" action="View_gerer_utilisateur.php">
+            <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="submit" value="debannir" name='deban'> 
         </form> 
-        <form method="GET" action="modif_utilisateur_stealmarket.php">
-            <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" ></input>
+        <form method="GET" action="View_modif_utilisateur.php">
+            <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="submit" value="modifier" name='modif'> 
         </form> 
-    
-        <?php }?>
+       
+        
     </body>
 
 </html>

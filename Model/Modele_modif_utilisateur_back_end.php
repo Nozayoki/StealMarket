@@ -17,5 +17,5 @@
              code_postal = '".$g."' , ville = '".$h."' , pays = '".$i."' , telephone = '".$j."' WHERE ID = '".$num_dossier."'"); 
             echo"le compte du client a bien été modifié cliquer sur le lien ci dessous pour revenir sur le back end <br>
             <a href='View_back_end.php'>retour au back end</a>";
-        } else {
+        } 
 ?>

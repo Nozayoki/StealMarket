@@ -38,7 +38,7 @@
                     while($donnees =$reponse->fetch()){
                 ?>
                 <tr>
-                    <form method="GET" action="gerer_utilisateur_stealmarket.php">
+                    <form method="GET" action="View_gerer_utilisateur.php">
                         <td><?php echo $donnees['ID']; ?></td>
 			            <td><?php echo $donnees['nom']; ?></td>
 			            <td><?php echo $donnees['prenom']; ?></td>
@@ -75,7 +75,7 @@
                     while($donnees =$reponse->fetch()){
                 ?>
                 <tr>
-                    <form method="GET" action="gerer_articles_stealmarket.php">
+                    <form method="GET" action="View_ajout_article.php">
                         <td><?php echo $donnees['ID']; ?></td>
 			            <td><?php echo $donnees['articles']; ?></td>
 			            <td><?php echo $donnees['prix']; ?></td>

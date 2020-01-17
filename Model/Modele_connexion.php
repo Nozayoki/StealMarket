@@ -29,7 +29,7 @@ if ($trouve){
     setcookie("prenom_connexion", $reponse2, time()+3600,"/");
     
     echo "c'est cool";
-    $aze="View_femme.php";
+    $aze="../index.php";
     if ($niquetamere){$aze="View_back_end.php";}
     header ("location:$aze");
 }else {echo "pas cool t'existe pas";}

@@ -10,7 +10,7 @@
         $bdd->query('UPDATE utilisateurs SET fonction = "utilisateur" WHERE ID = '.$num_dossier.''); 
          echo("Le compte à bien été débannie cliquer sur le lien ci-dessous pour revenir à la liste des dossiers <br>
         <a href='View_back_end.php'>Retour accueil</a>"); 
-    } else {
+    } 
         $num_dossier = $_GET['dossier'];
         $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE ID = '.$num_dossier.''); 
         $row =$reponse->fetch(); 
