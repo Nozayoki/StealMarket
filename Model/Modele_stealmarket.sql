@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 06 jan. 2020 à 18:31
+-- Généré le :  lun. 13 jan. 2020 à 21:56
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -41,15 +41,20 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`ID`, `articles`, `categorie`, `prix`, `stock`) VALUES
-(1, 'Femme Top Noir', 'Femme', 10, 50),
-(2, 'Femme Robe moulante bo', 'Femme', 10, 150),
-(6, 'Robe bordeau', 'Femme', 40, 0),
-(10, 'femme pull bleu', 'Femme', 15, 0),
-(9, 'Femme robe verte', 'Femme', 58, 0),
-(16, 'pull homme', '', 50, 46),
-(15, 'Femme jean bleu', '', 25, 3),
-(14, 'Boucle d\'oreille', '', 30, 20),
-(17, 'Robe bleu avec dentell', '', 60, 12);
+(36, 'Boucle a pince en or', 'Boucle', 359, 10),
+(20, 'Chevalière Vermeil', 'Bague', 90, 20),
+(19, 'pull beige laine', 'Homme', 70, 60),
+(39, 'Robe a dentelle', 'Femme', 99, 6),
+(17, 'Robe bleu avec dentell', '', 60, 12),
+(21, 'Bague de fiançaille', 'Bague', 350, 3),
+(22, 'Chemise en lin', 'Homme', 105, 25),
+(23, 'Montre clueless', 'Montre', 145, 10),
+(24, 'Montre lee Cooper', 'Montre', 350, 20),
+(28, 'Montre Emilio Zagato', 'Montre', 299, 23),
+(33, 'Boucle d\'oreille Noir', 'Boucle', 29, 10),
+(32, 'Collier infini', 'Collier', 89, 20),
+(31, 'Collier discret', 'Collier', 59, 10),
+(41, 'Robe blanche ', 'Femme', 49, 50);
 
 -- --------------------------------------------------------
 
@@ -160,7 +165,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
