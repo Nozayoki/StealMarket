@@ -1,6 +1,9 @@
 <?php
 include ("../Control/Control_article.php")
 ?>
+<?php
+include("../View/View_accueil_stealmarket.php")
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,11 +23,12 @@ include ("../Control/Control_article.php")
     <?php $azer=$_GET["ID"]; echo "<input type='hidden' name='ID' value='$azer'"?>>
         <input type="submit" name="Panier" value="Ajouter Au Panier">
         </form>
-        <!-- $prix a le prix de l'article -->
+        
    </p>
    <p><img src="miniatures/<?= $id ?>.jpg" width="400" /><p>
    <form action='View_homme.php'>
    <input type='hidden' name='liste' value='on'>
    <input type='submit' value='Retour'>
+   <?php echo "$prix";?>
 </body>
 </html>

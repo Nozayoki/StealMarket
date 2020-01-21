@@ -13,6 +13,7 @@ include("../View/View_accueil_stealmarket.php")
             <li>
                 <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /><br />
                 <a href="View_article.php?ID=<?= $a['ID'] ?>"><?= $a['articles'] ?></a></li>
+                <?php echo $a['prix'];?>
             <?php } ?>
         <ul>
                 

@@ -14,7 +14,7 @@
       $titre = $articles['ID'];
       $id = $articles['ID'];
       $contenu = $articles['articles'];
-      $prix = $articles['articles'];
+      $prix = $articles['prix'];
    } else {
       die('Cet article n\'existe pas !');
    }
