@@ -1,4 +1,6 @@
-
+<?php
+            include ("../Model/Modele_gerer_son_compte.php")
+        ?>
 
 <!Doctype html>
 
@@ -26,9 +28,7 @@
             <label for="site-search">Search the site :</label>
             <input type="recherche" id="site-search" name="recherche"><br>
         </div>
-        <?php
-            include ("../Model/Modele_gerer_son_compte.php")
-        ?>
+       
         <table border ="1">
 	        <thead>
 		        <tr>
@@ -44,6 +44,7 @@
                     <th>pays</th>
                     <th>complément d'adresse</th>
                     <th>téléphone</th>
+                    <th>portefeuille</th>
 		        </tr>
 	        </thead>
 	        <tbody>
@@ -60,6 +61,7 @@
                     <td><?php echo $row['pays']; ?></td>
                     <td><?php echo $row['complement']; ?></td>
                     <td><?php echo $row['telephone']; ?></td>
+                    <td><?php echo $row['portefeuille']; ?></td>
                 </tr>
 	        </tbody>
 	    </table>
@@ -71,7 +73,8 @@
 
         Supprimer son compte(ATTENTION cette action est définitive):<br>
         <form method="GET" action="View_gerer_son_compte.php">
-        <input type="submit" value="valider" name="suppr">
+        <input type="submit" value="supprimer" name="suppr">
         </form>
+        
     </body>
 </html>
