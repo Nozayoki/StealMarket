@@ -1,6 +1,9 @@
 <?php
 include ("../Model/Modele_recherche.php")
 ?>
+<?php
+include("../View/View_accueil_stealmarket.php")
+?>
 <meta charset="utf-8" />
 
 <form method="GET">

@@ -20,6 +20,7 @@ include ("../Control/Control_article.php")
     <?php $azer=$_GET["ID"]; echo "<input type='hidden' name='ID' value='$azer'"?>>
         <input type="submit" name="Panier" value="Ajouter Au Panier">
         </form>
+        <!-- $prix a le prix de l'article -->
    </p>
    <p><img src="miniatures/<?= $id ?>.jpg" width="400" /><p>
    <form action='View_homme.php'>
