@@ -33,7 +33,7 @@
       
         <a href="View/view_inscription_steal.php"><img src="View/Image/engrenage.jpg"></a>
 
-        <a href="View_panier.php"><img src="View/Image/caddie.jpg"></a> <br> <br>
+        <a href="View/View_panier.php"><img src="View/Image/caddie.jpg"></a> <br> <br>
 
         <a href="View/View_homme.php"><img src="View/Image/vetement_homme.jpg"></a>
     

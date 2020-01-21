@@ -25,7 +25,7 @@ for ($i=0;$i<count($donnees);$i++){
 }
 if ($trouve){
     
-    //echo "<input type='hidden' name='prenom_connexion' method='GET' value='$reponse2'>";
+    //echo "<input type='hidden' name='ID_connexion' method='GET' value='$reponse2'>";
     setcookie("ID_connexion", $reponse2, time()+3600,"/");
     
     echo "c'est cool";

@@ -9,6 +9,7 @@ $yu=$_GET["nombre_article"];
    $abv=$bdd->query("SELECT * FROM articles WHERE ID ='$yu2' ");
    $abv=$abv->fetch();
    $contenu=$abv[1];
+   $total=0;
    //echo "$abv/";
    /*$abl=$bdd->query("SELECT ID FROM utilisateurs WHERE prenom ='$yu3' ");
    $abl=$abl->fetch();
@@ -37,6 +38,7 @@ $yu=$_GET["nombre_article"];
    $abr=$bdd->query("SELECT ID from commandes WHERE ID_utilisateurs='$yu3'");
    $abr=$abr->fetch();
    $abr=$abr[0];
+   $tot=$total+$tot2;
    $bdd->query("INSERT into  ligne_commandes (ID_commandes,ligne_comandes,ID_articles) VALUES('$abr','$tot2','$yu2')");
    $bdd->query("UPDATE commandes set total='$tot' where ID_utilisateurs='$yu3'");}
    else {
