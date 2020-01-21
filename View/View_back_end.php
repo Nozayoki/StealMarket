@@ -30,6 +30,7 @@
                     <th>pays</th>
                     <th>complément d'adresse</th>
                     <th>téléphone</th>
+                    <th>portefeuille</th>
                     <th>accéder au dossier</th>
 		        </tr>
 	        </thead>
@@ -51,6 +52,7 @@
                         <td><?php echo $donnees['pays']; ?></td>
                         <td><?php echo $donnees['complement']; ?></td>
                         <td><?php echo $donnees['telephone']; ?></td>
+                        <td><?php echo $donnees['portefeuille']; ?></td>
                         <td><input type="submit" value="<?php echo $donnees['ID']?>" name='dossier'></td>
                     </form> 
                 </tr>
