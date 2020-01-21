@@ -222,4 +222,16 @@ function paiementAccepte()
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
     unset($_SESSION['panier']);
 }
+function select ($bdd,$donnees,$table,$condition){
+    if (isset($condition)){
+        $reponse=$bdd->query("SELECT $donnees FROM $table WHERE $condition ;");
+        $donnees2 = $reponse->fetch();
+        return $donnees2[0];
+    }
+    else {
+        $reponse=$bdd->query("SELECT $donnees FROM $table ;");
+        $donnees2 = $reponse->fetch();
+        return $donnees2[0];
+    }    
+}
 ?> 
