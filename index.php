@@ -18,13 +18,16 @@
         
         <a href="View/View_femme.php">Collection Femme</a> 
         
-        <a href="View/View_accessoire.html">Accessoire</a>
+        <a href="View/View_accessoire.php">Accessoire</a>
         
         <a href="View/View_contact.html">En savoir plus</a>
         
         <a href="View/View_recherche.php">Recherche</a> 
+        <?php
+                if (isset($_COOKIE["ID_connexion"])){
 
-        <a href="View/View_gerer_son_compte.php">gérer son compte</a>
+        echo "<a href='View/View_gerer_son_compte.php'>gérer son compte</a>";}
+        ?>
         
         
         

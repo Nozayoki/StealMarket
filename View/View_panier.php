@@ -9,6 +9,9 @@
 </style> 
     </head>  
     <body>
+    <?php
+include("../View/View_accueil_stealmarket.php")
+?>
 <?php 
 include("../Control/Control_panier2.php")
 ?>

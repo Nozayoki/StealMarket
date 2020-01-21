@@ -18,5 +18,5 @@ echo "<form action='View_panier.php' method='POST'>
         else {
             echo "vous n'avez pas de panier<br><br>";
             echo "<a href='../index.php'><input type='button' value='Retour'> ";
-        }}
+        }}else {echo "vous n'êtes pas connecté";}
     ?>

@@ -12,7 +12,7 @@ include ("../Control/Control_article.php")
    <h1><?= $titre ?></h1>
    <p>
    <h1><?= $contenu ?></h1>
-   <form method='GET'>
+   <form method='POST'>
    <select name='nombre_article'>
     <option value='1' selected>1</option>
     <option value='2' selected>2</option>
