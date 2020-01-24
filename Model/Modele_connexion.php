@@ -14,7 +14,7 @@ $donnees = $reponse->fetchall();
 $trouve=false;
 //print_r ($donnees);
 for ($i=0;$i<count($donnees);$i++){
-    if($donnees[$i][5]===$_GET["adresse_mail"]&&$donnees[$i][4]===$_GET["mdp"]){
+    if($donnees[$i][5]===$_POST["adresse_mail"]&&$donnees[$i][4]===$_POST["mdp"]){
         $trouve=true;
         $reponse2 = $donnees[$i][0];
         if ($donnees[$i][3]=="administrateur"){
@@ -25,7 +25,7 @@ for ($i=0;$i<count($donnees);$i++){
 }
 if ($trouve){
     
-    //echo "<input type='hidden' name='ID_connexion' method='GET' value='$reponse2'>";
+    //echo "<input type='hidden' name='ID_connexion' method='POST' value='$reponse2'>";
     setcookie("ID_connexion", $reponse2, time()+3600,"/");
     
     echo "c'est cool";

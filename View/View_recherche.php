@@ -6,16 +6,16 @@ include("../View/View_accueil_stealmarket.php")
 ?>
 <meta charset="utf-8" />
 
-<form method="GET">
+<form method="POST">
    <input type="search" name="q" placeholder="Recherche..." />
    <input type="submit" value="Valider" />
 </form>
 <?php if($articles->rowCount() > 0) { ?>
    <ul>
    <?php while($a = $articles->fetch()) { ?>
-      <li><?= $a['articles'] ?></li>
+      <li><a href="View_article.php?ID=<?php $bg = $a['ID']; echo "$bg"; ?>"><?php echo $a['articles']?></li>
    <?php } ?>
    </ul>
 <?php } else { ?>
-Aucun résultat pour: <?= $q ?>...
+Aucun résultat pour: <?= $qa ?>...
 <?php } ?>
