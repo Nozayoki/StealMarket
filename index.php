@@ -11,6 +11,12 @@
     </head>
 
     <body>
+        <?php 
+                if (isset($_POST["deco"])){
+                    unset($_COOKIE["ID_connexion"]);
+                } 
+                
+        ?>
        
         <a href="index.php">INDUMENTIS</a> 
         
@@ -26,7 +32,12 @@
         <?php
                 if (isset($_COOKIE["ID_connexion"])){
 
-        echo "<a href='View/View_gerer_son_compte.php'>gérer son compte</a>";}
+        echo "<a href='View/View_gerer_son_compte.php'>gérer son compte</a>";
+        echo "<form method='post' action='index.php' >
+                <input type='submit' value='se déconnecter' name='deco'>
+              </form>";    
+        }
+        
         ?>
         
         
