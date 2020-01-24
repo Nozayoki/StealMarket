@@ -90,7 +90,7 @@
                $h=$_GET["ville"];
                $i=$_GET["pays"];
                $j=$_GET["telephone"];
-               /*if(!(*/try {/*$reponse =*/ $bdd->query("INSERT INTO utilisateurs(adresse_mail, mdp, prenom, nom, adresse, complement, code_postal, ville, pays, telephone) VALUES ('$a','$b','$c','$d','$e','$f','$g','$h','$i','$j');");//.$_GET['adresse_mail'].",'".$_GET['mdp']."','".$_GET['prenom']."','".$_GET['nom']."','".$_GET['adresse']."','".$_GET['complement']."',".$_GET['code_postal'].",'".$_GET['ville']."','".$_GET['pays']."',".$_GET['telephone'].");");//))
+               /*if(!(*/try {/*$reponse =*/ $bdd->query("INSERT INTO utilisateurs(adresse_mail, mdp, prenom, nom, adresse, complement, code_postal, ville, pays, telephone, portefeuille) VALUES ('$a','$b','$c','$d','$e','$f','$g','$h','$i','$j',0);");//.$_GET['adresse_mail'].",'".$_GET['mdp']."','".$_GET['prenom']."','".$_GET['nom']."','".$_GET['adresse']."','".$_GET['complement']."',".$_GET['code_postal'].",'".$_GET['ville']."','".$_GET['pays']."',".$_GET['telephone'].");");//))
                    //echo'échec';
                //else {
                }catch(Exception $e){
