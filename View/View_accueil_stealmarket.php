@@ -8,6 +8,7 @@
 	        height: 50px;
             };
         </style>
+        <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.css" type="text/css" />
     </head>
 
     <body>
