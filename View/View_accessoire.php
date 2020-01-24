@@ -1,5 +1,5 @@
 <?php
-include("../View/View_accueil_stealmarket.php")
+include("../View/View_accueil_stealmarket2.php")
 ?>
 
                 

@@ -2,11 +2,7 @@
 include ("../Model/Modele_article_boucle.php")
 ?>
 <?php
-include("../View/View_accueil_stealmarket.php")
-?>
-
-<?php
-include("../View/View_accueil_stealmarket.php")
+include("../View/View_accueil_stealmarket2.php")
 ?>
         <h1>Boucle d'oreille</h1>
         

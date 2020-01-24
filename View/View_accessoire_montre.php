@@ -2,7 +2,7 @@
 include ("../Model/Modele_article_montre.php")
 ?>
 <?php
-include("../View/View_accueil_stealmarket.php")
+include("../View/View_accueil_stealmarket2.php")
 ?>
         <h1>Montre</h1>
         

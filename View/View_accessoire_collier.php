@@ -2,7 +2,7 @@
 include ("../Model/Modele_article_collier.php")
 ?>
 <?php
-include("../View/View_accueil_stealmarket.php")
+include("../View/View_accueil_stealmarket2.php")
 ?>
         <?php
         include("../Control/Control_connexion.php")
