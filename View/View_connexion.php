@@ -1,15 +1,10 @@
-<!doctype html utf8>
-
-<html>
-    <head>
-
-    </head>
-
-    <body>
+<?php
+include ("View_accueil_stealmarket.php")
+?>
     <h1>CONNEXION</h1>
         <?php
-        if(!isset($_GET['adresse_mail']) && !isset($_GET['mdp'])){
-            echo' <form method="GET" action="../View/View_connexion.php">
+        if(!isset($_POST['adresse_mail']) && !isset($_POST['mdp'])){
+            echo' <form method="POST" action="../View/View_connexion.php">
             <input type="text" name="adresse_mail" placeholder="Adresse email"><br>
             <input type="password" name="mdp" placeholder="Mot de passe"><br>
             <input type="submit" value="Connexion"><br>
