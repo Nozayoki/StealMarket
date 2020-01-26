@@ -4,47 +4,62 @@
     <head>
         <style>
             img{
-	        width: 50px;
-	        height: 50px;
+	        width: 150px;
+	        height: 150px;
             };
         </style>
-        <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../Css/style.css" type="text/css" />
     </head>
 
     <body>
-       
-        <a href="../index.php">INDUMENTIS</a> 
-        
-        <a href="View_homme.php">Collection Homme</a> 
-        
-        <a href="View_femme.php">Collection Femme</a> 
-        
-        <a href="View_accessoire_bague.php">Bague</a>
-        <a href="View_accessoire_boucle.php">Boucle</a>
-        <a href="View_accessoire_collier.php">Collier</a>
-        <a href="View_accessoire_montre.php">Montre</a>
-        
-        <a href="View_contact.html">En savoir plus</a>
-        
-        <a href="View_recherche.php">Recherche</a> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="../index.php">INDUMENTIS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/View_homme.php">Collection Homme<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_femme.php">Collection Femme</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_accessoire_bague.php">Bague</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_accessoire_boucle.php">Boucle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_accessoire_collier.php">Collier</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_accessoire_montre.php">Montre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_contact.html">En savoir plus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_recherche.php">Recherche</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_inscription_steal.php">Inscription</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_panier.php">Panier</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
         <?php
                 if (isset($_COOKIE["ID_connexion"])){
 
         echo "<a href='View_gerer_son_compte.php'>gérer son compte</a>";}
         ?>
-        
-        
-      
-        <a href="View_recherche.php"><img src="Image/loupe.png"></a>
-      
-        <a href="View_inscription_steal.php"><img src="Image/engrenage.jpg"></a>
-
-        <a href="View_panier.php"><img src="Image/caddie.jpg"></a> <br> <br>
-
-        <a href="View_homme.php"><img src="Image/vetement_homme.jpg"></a>
-    
-        <a href="View_femme.php"><img src="Image/vetement_femme.jpg"></a> <br>
-
         
             <p>
                 <?php

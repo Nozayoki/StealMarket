@@ -2,15 +2,19 @@
 
 <html>
     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../Css/style.css" type="text/css" />
 
     </head>
 
     <body>
-        <h1>INDUMENTIS</h2>
+        <div class="center">
+        <h1>INDUMENTIS</h1>
         <?php
         include("../Control/Control_inscription.php")
         ?>
-
+        
         <form method="POST" action="../View/view_inscription_steal.php">
                 Coordonnées: <br>
                 <input type="text" name="adresse_mail" placeholder="Adresse email">
@@ -32,7 +36,10 @@
                 <input type="submit" value="Création de compte"><br>
                 </form>
 
-        <a href="../View/View_accueil_stealmarket.php">Retour accueil</a> <br>   
+        <a href="../index.php">Retour accueil</a> <br>  
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div> 
     </body> 
 </html>
    

@@ -3,7 +3,8 @@ include ("../Model/Modele_article_boucle.php")
 ?>
 <?php
 include("../View/View_accueil_stealmarket2.php")
-?>
+?>  
+    <div class="center">
         <h1>Boucle d'oreille</h1>
         
         

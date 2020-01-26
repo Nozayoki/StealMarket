@@ -5,6 +5,7 @@ include ("../Model/Modele_article_femme.php")
 <?php
 include("../View/View_accueil_stealmarket.php")
 ?>
+        <div class="center">
         <h1>Femme</h1>    
         
         <ul>

@@ -4,6 +4,7 @@ include ("../Model/Modele_article_montre.php")
 <?php
 include("../View/View_accueil_stealmarket2.php")
 ?>
+    <div class="center">
         <h1>Montre</h1>
         
         <ul>

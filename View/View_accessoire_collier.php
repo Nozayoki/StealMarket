@@ -7,6 +7,7 @@ include("../View/View_accueil_stealmarket2.php")
         <?php
         include("../Control/Control_connexion.php")
         ?>
+        <div class="center">
         <h1>Collier</h1>
         
         <ul>

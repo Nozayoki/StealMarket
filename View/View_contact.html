@@ -5,27 +5,50 @@
 
         <meta charset="UTF-8">
         <title>En savoir plus</title>
+        <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
     </head>
     <body>
                
-        <a href="../index.php">INDUMENTIS</a> 
-        
-        <a href="View_homme.php">Collection Homme</a> 
-        
-        <a href="View_femme.php">Collection Femme</a> 
-        
-        <a href="View_accessoire.html">Accessoire</a> 
-
-        <a href="View_ajout_article.php">Ajout article</a>
-        
-        <form>
-            <input type="button" value="En savoir plus">
-        </form>
-        <div id="recherche">
-            <label for="site-search">Search the site :</label>
-            <input type="recherche" id="site-search" name="recherche">
-        </div>
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="../index.php">INDUMENTIS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="View_homme.php">Collection Homme<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="View_femme.php">Collectioon Femme</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="View_accessoire.php">Accessoire</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="View_contact.html">En savoir plus</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="View_recherche.php">Recherche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="View_inscription_steal.php">Inscription</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="View_panier.php">Panier</a>
+                  </li>
+              </ul>
+              </div>
+          </nav>
+          <div class="jumbotron">
+            <h1 class="display-3">Bienvenue sur le Projet StealMarket!</h1>
+            <p class="lead">Le nom du projet n'a pas le même nom que le site et cela est tout ta fait normal</p>
+            <hr class="my-4">
+            <p>Nous avons donc décider de séparer les 2 nom un peu comme si StealMarket était une entreprise qui crée de nombreux site 
+                et INDUMENTIS Est l'un de ses nombreux site 
+            </p>
+          </div>
         <h1>L'équipe</h1></br>
         <h3>William Mpassy</h3>
         <img src="Image/williamm.jpg" width="150">

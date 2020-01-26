@@ -8,6 +8,7 @@ include("../View/View_accueil_stealmarket2.php")
         <?php
         include("../Control/Control_connexion.php")
         ?>
+        <div class="center">
         <h1>Bague</h1>
         <form method='GET' action="../Model/Modele_ajouter_panier.php">
         <input type="submit" value="Ajouter Au Panier">
