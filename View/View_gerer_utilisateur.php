@@ -49,26 +49,26 @@
 	    </table>
         
         pour bannir le compte cliquer ici:<br>
-        <form method="GET" action="View_gerer_utilisateur.php">
+        <form method="POST" action="View_gerer_utilisateur.php">
             <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="submit" value="bannir" name="ban">
         </form>
     
         Pour débannir ce compte cliquer ici:<br>
-        <form method="GET" action="View_gerer_utilisateur.php">
+        <form method="POST" action="View_gerer_utilisateur.php">
             <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="submit" value="debannir" name="deban"> 
         </form> 
-        <form method="GET" action="View_modif_utilisateur.php">
+        <form method="POST" action="View_modif_utilisateur.php">
             <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="submit" value="modifier" name="modif"> 
         </form> 
-        <form method="GET" action="View_gerer_utilisateur.php">
+        <form method="POST" action="View_gerer_utilisateur.php">
             <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="text" name="ajout_argent">
             <input type="submit" value="ajouter l'argent" name="ajouter"> 
         </form> 
-        <form method="GET" action="View_gerer_utilisateur.php">
+        <form method="POST" action="View_gerer_utilisateur.php">
             <input type="hidden" name="dossier" value="<?php echo $num_dossier; ?>" >
             <input type="text" name="retirer_argent">
             <input type="submit" value="retirer l'argent" name="retirer"> 

@@ -57,7 +57,7 @@ include ("../Model/Modele_article.php")
         </form>
         
         <br/>
-        <form method="GET">
+        <form method="POST">
         veuillez entrer le nom de l'article à supprimer : <br>
         <input type="text" name="articles_titre_suppr"/><br/>
         <input type="submit" value="supprimer l'article" />

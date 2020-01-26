@@ -43,7 +43,7 @@ include ("../View/View_accueil_stealmarket.php")
 	        </tbody>
 	    </table>
         Modifier son mot de passe:<br>
-        <form method="GET" action="View_gerer_son_compte.php">
+        <form method="POST" action="View_gerer_son_compte.php">
         <input type="text" name="mdp" placeholder="nouveau mot de passe"><br>
         <input type="text" name="nom" placeholder="nouveau nom"><br>
         <input type="text" name="prenom" placeholder="nouveau prenom"><br>
@@ -57,7 +57,7 @@ include ("../View/View_accueil_stealmarket.php")
         </form>
 
         Supprimer son compte(ATTENTION cette action est définitive):<br>
-        <form method="GET" action="View_gerer_son_compte.php">
+        <form method="POST" action="View_gerer_son_compte.php">
         <input type="submit" value="supprimer" name="suppr">
         </form>
         

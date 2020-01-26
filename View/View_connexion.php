@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 <?php
 include ("View_accueil_stealmarket.php")
 ?>
+=======
+<!doctype html utf8>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="../Css/style.css" type="text/css" />
+    </head>
+
+    <body>
+>>>>>>> e29ffc0c3ca3e1a5db1ae4c13a52262d268988a8
     <h1>CONNEXION</h1>
         <?php
         if(!isset($_POST['adresse_mail']) && !isset($_POST['mdp'])){
