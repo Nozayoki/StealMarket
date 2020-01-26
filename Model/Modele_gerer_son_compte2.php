@@ -5,49 +5,49 @@ $table='UTILISATEURS';
 function modif($bdd,$table,$column_modif,$modification,$id){
     $bdd->query("UPDATE $table SET $column_modif = '".$modification."' WHERE ID = ".$id."");
 }
-if (isset($_GET['mdp'])AND !empty($_GET['mdp'])){
+if (isset($_POST['mdp'])AND !empty($_POST['mdp'])){
     $column_modif='mdp';
-    $modification=$_GET['mdp'];
+    $modification=$_POST['mdp'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['nom'])AND !empty($_GET['nom'])){
+if (isset($_POST['nom'])AND !empty($_POST['nom'])){
     $column_modif='nom';
-    $modification=$_GET['nom'];
+    $modification=$_POST['nom'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['prenom'])AND !empty($_GET['prenom'])){
+if (isset($_POST['prenom'])AND !empty($_POST['prenom'])){
     $column_modif='prenom';
-    $modification=$_GET['prenom'];
+    $modification=$_POST['prenom'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['telephone'])AND !empty($_GET['telephone'])){
+if (isset($_POST['telephone'])AND !empty($_POST['telephone'])){
     $column_modif='telephone';
-    $modification=$_GET['telephone'];
+    $modification=$_POST['telephone'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['code_postal'])AND !empty($_GET['code_postal'])){
+if (isset($_POST['code_postal'])AND !empty($_POST['code_postal'])){
     $column_modif='code_postal';
-    $modification=$_GET['code_postal'];
+    $modification=$_POST['code_postal'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['pays'])AND !empty($_GET['pays'])){
+if (isset($_POST['pays'])AND !empty($_POST['pays'])){
     $column_modif='pays';
-    $modification=$_GET['pays'];
+    $modification=$_POST['pays'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['adresse'])AND !empty($_GET['adresse'])){
+if (isset($_¨POST['adresse'])AND !empty($_POST['adresse'])){
     $column_modif='adresse';
-    $modification=$_GET['adresse'];
+    $modification=$_POST['adresse'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['complement'])AND !empty($_GET['complement'])){
+if (isset($_POST['complement'])AND !empty($_POST['complement'])){
     $column_modif='complement';
-    $modification=$_GET['complement'];
+    $modification=$_POST['complement'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
-if (isset($_GET['ville'])AND !empty($_GET['ville'])){
+if (isset($_POST['ville'])AND !empty($_POST['ville'])){
     $column_modif='ville';
-    $modification=$_GET['ville'];
+    $modification=$_POST['ville'];
     modif ($bdd,$table,$column_modif,$modification,$id);
 }
 /*if(isset($_GET['modif'])){

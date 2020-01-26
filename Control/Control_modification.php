@@ -1,6 +1,6 @@
 <?php
-    if(isset($_GET['edit']) AND !empty($_GET['edit'])) {
-   $edit_id = htmlspecialchars($_GET['edit']);
+    if(isset($_POST['edit']) AND !empty($_POST['edit'])) {
+   $edit_id = htmlspecialchars($_POST['edit']);
    $edit_article = $bdd->prepare('SELECT * FROM articles WHERE ID = ?');
    $edit_article->execute(array($edit_id));
    

@@ -6,29 +6,42 @@
 
 <html>
     <head>
+    <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../Css/style.css" type="text/css" />
     </head>  
     <body>
-       
-        <a href="../index.php">INDUMENTIS</a> 
-        
-        <a href="View_homme.php">Collection Homme</a> 
-        
-        <a href="View_femme.php">Collection Femme</a> 
-        
-        <a href="View_accessoire.html">Accessoire</a> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="../index.php">INDUMENTIS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <a href="View_ajout_article.php">Ajout article</a>
-
-        <a href="View_contact.html">En savoir plus</a>
-        
-        <form>
-            <input type="button" value="En savoir plus">
-        </form>
-        <div id="recherche">
-            <label for="site-search">Search the site :</label>
-            <input type="recherche" id="site-search" name="recherche"><br>
-        </div>
-       
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="View_homme.php">Collection Homme<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_femme.php">Collection Femme</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_accessoire.php">Accessoire</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_contact.html">En savoir plus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_recherche.php">Recherche</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_inscription_steal.php">Inscription</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="View_panier.php">Panier</a>
+      </li>
+    </ul>
+    </div>
+</nav>      
         <table border ="1">
 	        <thead>
 		        <tr>
@@ -66,13 +79,13 @@
 	        </tbody>
 	    </table>
         Modifier son mot de passe:<br>
-        <form method="GET" action="View_gerer_son_compte.php">
+        <form method="POST" action="View_gerer_son_compte.php">
         <input type="text" name="mdp" placeholder="nouveau mot de passe"><br>
         <input type="submit" value="valider" name="modif">
         </form>
 
         Supprimer son compte(ATTENTION cette action est définitive):<br>
-        <form method="GET" action="View_gerer_son_compte.php">
+        <form method="POST" action="View_gerer_son_compte.php">
         <input type="submit" value="supprimer" name="suppr">
         </form>
         

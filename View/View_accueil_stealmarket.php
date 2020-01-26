@@ -1,3 +1,6 @@
+<?php
+include ("../View/View_connexion.php");
+?>
 <!doctype html utf-8>
 
 <html>

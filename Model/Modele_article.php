@@ -9,7 +9,7 @@ require("../Control/Control_function.php")
 
 if (isset($_POST["Panier"]) AND isset($_COOKIE["ID_connexion"])){
 $yu=$_POST["nombre_article"];
-   $ID_article=htmlspecialchars($_GET["ID"]);
+   $ID_article=htmlspecialchars($_POST["ID"]);
    $ID_utilisateur=$_COOKIE["ID_connexion"];
    
    $contenu=select($bdd,'articles','articles',"ID='$ID_article'");

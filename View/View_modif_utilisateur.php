@@ -8,7 +8,7 @@
         <?php 
         include ("../Model/Modele_modif_utilisateur_back_end.php")   
  ?>
- <form method="GET" action="View_modif_utilisateur.php">
+ <form method="POST" action="View_modif_utilisateur.php">
  Coordonnées: <br>
  <input type="text" name="adresse_mail" value="<?php echo $row['adresse_mail']?>">
  <input type="text" name="mdp" value="<?php echo $row['mdp']?>"><br>

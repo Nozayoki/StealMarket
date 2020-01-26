@@ -1,12 +1,12 @@
 <?php
-   $titre = $_GET['ID'];
-   $id=$_GET['ID'];
+   $titre = $_POST['ID'];
+   $id=$_POST['ID'];
  
  include_once("../Model/Modele_article.php")
  ?>
  <?php
- if(isset($_GET['ID']) AND !empty($_GET['ID'] AND !isset($_POST["Panier"]))) {
-   $get_id = htmlspecialchars($_GET['ID']);
+ if(isset($_POSt['ID']) AND !empty($_POST['ID'] AND !isset($_POST["Panier"]))) {
+   $get_id = htmlspecialchars($_POST['ID']);
    $articles = $bdd->prepare('SELECT * FROM articles WHERE ID = ?');
    $articles->execute(array($get_id));
    if($articles->rowCount() == 1) {
