@@ -14,7 +14,7 @@ include("../View/View_accueil_stealmarket.php")
 <body>
    <p>
    <h1><?= $contenu ?></h1>
-   <form method='POST'>
+   <form method='GET'>
    </p>
    <p><img src="miniatures/<?= $id ?>.jpg" width="400" /><p>
    <select name='nombre_article'>
