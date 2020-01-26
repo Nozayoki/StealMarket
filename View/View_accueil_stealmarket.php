@@ -16,7 +16,7 @@
     <body>
     <?php 
         if (isset($_POST["deco"])){
-        unset($_COOKIE["ID_connexion"]);
+          setcookie ("ID_connexion","",time()-3600,"/");
         } 
                 
         ?>
