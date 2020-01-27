@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<?php
-include ("View_accueil_stealmarket.php")
-?>
-=======
 <!doctype html utf8>
 
 <html>
@@ -12,7 +7,6 @@ include ("View_accueil_stealmarket.php")
     </head>
 
     <body>
->>>>>>> e29ffc0c3ca3e1a5db1ae4c13a52262d268988a8
     <h1>CONNEXION</h1>
         <?php
         if(!isset($_POST['adresse_mail']) && !isset($_POST['mdp'])){
