@@ -37,6 +37,6 @@ $donnees = $aaa -> fetchall();
             echo "<td>".$bg."</td>";
         }
     }
-    echo "</tr><td>total du panier</td><td>$abs</td></table><br>";}
+    echo "<div class='right'> total du panier $abs €  </div><br>";}
     else {}
 ?>

@@ -2,6 +2,7 @@
 
 <html>
     <head>
+    <link rel="stylesheet" href="../Css/style.css" type="text/css" />
     <style> table, tr, td {
   border: 1px solid black;
   border-collapse: collapse;
