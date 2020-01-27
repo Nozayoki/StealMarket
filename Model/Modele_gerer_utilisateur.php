@@ -21,6 +21,6 @@
         <a href='View_back_end.php'>Retour accueil</a>");
     }
         $num_dossier = $_POST['dossier'];
-        $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE ID = '.$num_dossier.''); 
+        $reponse = $bdd->query('SELECT * FROM utilisateurs WHERE ID = "'.$num_dossier.'"'); 
         $row =$reponse->fetch(); 
 ?>
