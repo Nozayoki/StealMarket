@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 13 jan. 2020 à 21:56
+-- Généré le :  lun. 27 jan. 2020 à 13:39
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -69,6 +69,14 @@ CREATE TABLE `commandes` (
   `ID_utilisateurs` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `commandes`
+--
+
+INSERT INTO `commandes` (`ID`, `prix`, `total`, `ID_utilisateurs`) VALUES
+(0, 0, 637, 8),
+(0, 0, 874, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -125,21 +133,26 @@ CREATE TABLE `utilisateurs` (
   `ville` varchar(50) NOT NULL,
   `pays` varchar(50) NOT NULL,
   `complement` varchar(50) NOT NULL,
-  `telephone` bigint(35) NOT NULL
+  `telephone` bigint(35) NOT NULL,
+  `portefeuille` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`ID`, `nom`, `prenom`, `fonction`, `mdp`, `adresse_mail`, `adresse`, `code_postal`, `ville`, `pays`, `complement`, `telephone`) VALUES
-(1, 'mpassy', 'william', '', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647),
-(2, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647),
-(3, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647),
-(4, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 6650657755),
-(5, 'mpassy', 'william', 'utilisateur', 'Xaaaa', 'iExterminity@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '13', 665065731),
-(6, 'mpassy', 'william', 'utilisateur', 'Zaaa', 'iExterminity@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '13', 665065731),
-(7, 'renÃ©e louis', 'thylane', 'utilisateur', 'Xaaaa', 'po@.fr', '13 rue du Cognassier', 91, 'vigneux-sur-seine', 'france', '3', 3240);
+INSERT INTO `utilisateurs` (`ID`, `nom`, `prenom`, `fonction`, `mdp`, `adresse_mail`, `adresse`, `code_postal`, `ville`, `pays`, `complement`, `telephone`, `portefeuille`) VALUES
+(1, 'mpassy', 'william', '', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647, 0),
+(2, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647, 0),
+(3, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 2147483647, 0),
+(4, 'mpassy', 'william', 'utilisateur', 'Xaaa', 'williammpassy@gmail.com', '13 rue patoche', 75000, 'paris', 'france', '3', 6650657755, 0),
+(5, 'mpassy', 'william', 'utilisateur', 'Xaaaa', 'iExterminity@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '13', 665065731, 0),
+(6, 'mpassy', 'william', 'utilisateur', 'Zaaa', 'iExterminity@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '13', 665065731, 0),
+(7, 'renÃ©e louis', 'thylane', 'utilisateur', 'Xaaaa', 'po@.fr', '13 rue du Cognassier', 91, 'vigneux-sur-seine', 'france', '3', 3240, 0),
+(8, 'Mpassy', 'Mpassy', 'administrateur', 'Xa', 'williammpassy@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '3', 665065731, 0),
+(9, 'Mpassy', 'Mpassy', 'utilisateur', 'Za', 'williammpassy@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '3', 665065731, 0),
+(10, 'Mpassy', 'Mpassy', 'utilisateur', 'Za', 'williammpassy@gmail.com', '13 rue du Cognassier', 91270, 'vigneux-sur-seine', 'france', '3', 665065731, 0),
+(11, 'singbeu', 'colombe', 'utilisateur', 'Titi', 'colombesingbeu273@gmail.com', '2 rue pierre de coubertin', 94510, 'la queue en brie', 'france', '2', 751253250, 1855);
 
 --
 -- Index pour les tables déchargées
@@ -149,6 +162,12 @@ INSERT INTO `utilisateurs` (`ID`, `nom`, `prenom`, `fonction`, `mdp`, `adresse_m
 -- Index pour la table `articles`
 --
 ALTER TABLE `articles`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `ligne_commandes`
+--
+ALTER TABLE `ligne_commandes`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -168,10 +187,16 @@ ALTER TABLE `articles`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
+-- AUTO_INCREMENT pour la table `ligne_commandes`
+--
+ALTER TABLE `ligne_commandes`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
