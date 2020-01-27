@@ -24,7 +24,7 @@
         if (isset($_COOKIE["ID_connexion"])){
 
         echo "<a href='View_gerer_son_compte.php'>gérer son compte</a>";
-        echo "<form method='post' action='index.php' >
+        echo "<form method='post' action='../index.php' >
         <input type='submit' value='se déconnecter' name='deco'>
       </form>";  
                 }

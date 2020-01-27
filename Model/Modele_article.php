@@ -17,7 +17,7 @@ $yu=$_POST["nombre_article"];
    
    
    $abn=select($bdd,'prix','articles',"ID='$ID_article'");
-  
+   $prix=$abn; 
    $tot2=$abn*$yu;
    
    $bae=select($bdd,'ID','commandes',"ID_utilisateurs='$ID_utilisateur'");
