@@ -18,7 +18,7 @@ $aaa = $bdd -> query("SELECT * FROM ligne_commandes WHERE ID_commandes ='$abg' "
 $donnees = $aaa -> fetchall();
 //echo "yo";
     //$donnees = $reponse->fetchall();
-    echo "<table><tr>";
+    echo "<table><tr><td>ID</td><td>prix</td><td>ID_articles</td><td>ID_commandes</td>";
     for ($i=0;$i<count($donnees);$i++){
         echo "</tr><tr>";
         for ($j=0;$j<count($donnees[$i])/2;$j++){
