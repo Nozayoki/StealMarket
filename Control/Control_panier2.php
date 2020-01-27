@@ -5,9 +5,6 @@
     if ($payer){
         header("location:../index.php");
     }else {
-        include("../Model/Modele_panier.php")
-        ?>
-        <?php
         echo "Vous n'avez pas assez d'argent sur votre compte!<br>";
         echo "<a href='../index.php'><input type='button' class='btn btn-primary' value='Retour'> ";    
     }

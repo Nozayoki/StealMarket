@@ -16,6 +16,6 @@
         echo'
         Félicitation ! Vous êtes maintenant inscrit sur Indumentis <br>
         Cliquez sur le lien ci-dessous pour revenir à la page d\'acceuil <br> ';
-    header("location:../index.php");
+    //header("location:../index.php");
     }
 ?>

@@ -81,6 +81,14 @@
         Modifier son mot de passe:<br>
         <form method="POST" action="View_gerer_son_compte.php">
         <input type="text" name="mdp" placeholder="nouveau mot de passe"><br>
+        <input type="text" name="tel" placeholder="nouveau numéro de téléphone"><br>
+        <input type="text" name="adresse_mail" placeholder="nouvelle adresse mail"><br>
+        <input type="text" name="adresse" placeholder="nouvelle adresse"><br>
+        <input type="text" name="code_postal" placeholder="nouveau code postal"><br>
+        <input type="text" name="ville" placeholder="nouvelle ville"><br>
+        <input type="text" name="pays" placeholder="nouveau pays"><br>
+        <input type="text" name="prenom" placeholder="nouveau prenom"><br>
+        <input type="text" name="nom" placeholder="nouveau nom"><br>
         <input type="submit" value="valider" name="modif">
         </form>
 
