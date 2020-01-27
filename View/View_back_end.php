@@ -53,7 +53,8 @@
                         <td><?php echo $donnees['complement']; ?></td>
                         <td><?php echo $donnees['telephone']; ?></td>
                         <td><?php echo $donnees['portefeuille']; ?></td>
-                        <td><input type="submit" value="<?php echo $donnees['ID']?>" name='dossier'></td>
+                        <input type="hidden" name="dossier" value="<?php echo  $donnees['ID'];?>">
+                        <td><input type="submit" value="accéder" name='dossiers'></td>
                     </form> 
                 </tr>
                 <?php }?>
