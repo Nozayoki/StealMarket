@@ -223,7 +223,7 @@ function paiementAccepte()
     unset($_SESSION['panier']);
 }
 function select ($bdd,$donnees,$table,$condition){
-    if (isset($condition)){
+    if (isset($condition)AND $condition!==""){
         $reponse=$bdd->query("SELECT $donnees FROM $table WHERE $condition ;");
         $donnees2 = $reponse->fetch();
         return $donnees2[0];
@@ -233,5 +233,8 @@ function select ($bdd,$donnees,$table,$condition){
         $donnees2 = $reponse->fetch();
         return $donnees2[0];
     }    
+}
+function update ($bdd,$donnees,$cat,$table,$condition){
+    $bdd->query("UPDATE $table SET $cat=$donnees WHERE $condition ;");
 }
 ?> 
