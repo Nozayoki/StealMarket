@@ -4,18 +4,25 @@ include ("../Model/Modele_article_homme.php")
 <?php
 include("../View/View_accueil_stealmarket.php")
 ?>
-        <div class="center">
-        <h1>Homme</h1>    
-            
-        <ul>
+        <div class="container-fluid" style="margin-left:10%;">
+            <div class="container">
+                <div class="row">
+                    <article class="col-md-4">
+                    <p>
+                    <div class="titre" style="margin-left:70%;">            
+                    <h1>Homme</h1>
+                    </div>
+                    </p>
+                    </article>
+                </div>
+            </div>
             <?php while($a = $articles->fetch()) { ?>
-
-            <li>
-                 
-                <h1><img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /></h1>
-                <a href="View_article.php?ID=<?= $a['ID'] ?>"><?= $a['articles'] ?></a></li>
+                <div style="width:400px; float:left;">
+                    <a href="View_article.php?ID=<?= $a['ID'] ?>" style="float:left;"><?= $a['articles'] ?></a><br>
+                    <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" />
+                </div>
             <?php } ?>
-        <ul>
+        </div>
 
     </body>
 </html>

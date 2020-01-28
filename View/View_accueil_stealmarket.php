@@ -4,13 +4,6 @@
     <head>
     <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../Css/style.css" type="text/css" />
-        <style>
-            
-            img{
-	        width: 250px;
-	        height: 250px;
-            };
-        </style>
     </head>
 
     <body>
