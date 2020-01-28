@@ -3,7 +3,7 @@
 <html>
     <head>
     <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../Css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../Css/style.css" type="text/css" /> 
     </head>
 
     <body>
@@ -45,9 +45,21 @@
       <li class="nav-item">
         <a class="nav-link" href="View_recherche.php">Recherche</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_inscription_steal.php">Inscription</a>
-      </li>
+      <?php if (!isset($_COOKIE['ID_connexion'])){
+      echo "<li class='nav-item'>
+        <a class='nav-link' href='View_inscription_steal.php'>Inscription</a>
+      </li>";
+      echo "<li class='nav-item'>
+      <a class='nav-link' href='View_connexion.php'>Connexion</a>
+    </li>";}else {
+      echo "<li class='nav-item'>
+        <a class='nav-link' href='View_gerer_son_compte.php'>Gerer son compte</a>
+      </li>";
+      echo "<li class='nav-item'>
+      <a class='nav-link' href='../index.php?deco=co'>Deconnexion</a>
+    </li>";
+    }
+      ?>
       <li class="nav-item">
         <a class="nav-link" href="View_panier.php">Panier</a>
       </li>

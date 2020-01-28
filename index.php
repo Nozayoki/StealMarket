@@ -9,7 +9,7 @@
 
     <body>
         <?php 
-                if (isset($_POST["deco"])){
+                if (isset($_GET["deco"])){
                     setcookie ("ID_connexion","",time()-3600,"/");
                 } 
                 
@@ -38,9 +38,21 @@
       <li class="nav-item">
         <a class="nav-link" href="View/View_recherche.php">Recherche</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View/View_inscription_steal.php">Inscription</a>
-      </li>
+      <?php if (!isset($_COOKIE['ID_connexion'])){
+      echo "<li class='nav-item'>
+        <a class='nav-link' href='View/View_inscription_steal.php'>Inscription</a>
+      </li>";
+      echo "<li class='nav-item'>
+      <a class='nav-link' href='View/View_connexion.php'>Connexion</a>
+    </li>";}else {
+      echo "<li class='nav-item'>
+        <a class='nav-link' href='View/View_gerer_son_compte.php'>Gerer son compte</a>
+      </li>";
+      echo "<li class='nav-item'>
+      <a class='nav-link' href='index.php?deco=co'>Deconnexion</a>
+    </li>";
+    }
+      ?>
       <li class="nav-item">
         <a class="nav-link" href="View/View_panier.php">Panier</a>
       </li>
@@ -68,22 +80,6 @@
         <div>
         <form action="Control/Control_accueil.php" method="post">
             <p>
-                <?php
-                if (!isset($_COOKIE["ID_connexion"])){
-                echo "
-                <div class='center'>
-                <input type='radio' name='connexion' value='connexion' />
-                Connexion
-                
-            </p>
-            <p> 
-                <input type='radio' name='inscription' value='s'inscrire' />
-                S'inscrire
-            </p>
-                <input type='submit' name='validation' class='btn btn-outline-primary' value='Valider' /></div>";}
-                
-                //echo $_COOKIE["ID_connexion"];
-                ?>
 
         </form>  
         </div>

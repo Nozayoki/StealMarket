@@ -1,4 +1,7 @@
 <!doctype html utf8>
+<?php
+include("../View/View_accueil_stealmarket.php")
+?>
 
 <html>
     <head>

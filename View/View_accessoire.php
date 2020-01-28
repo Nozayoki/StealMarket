@@ -15,7 +15,7 @@ include("../View/View_accueil_stealmarket2.php")
                     </p>
                     </article>
                 </div>
-            </div>
+            </div></br>
             <?php $zae=''; while($a = $articles->fetch()) {
                 ?>
                 <div style="width:300px; float:left;">
