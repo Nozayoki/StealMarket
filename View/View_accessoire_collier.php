@@ -7,7 +7,7 @@ include("../View/View_accueil_stealmarket2.php")
         <?php
         include("../Control/Control_connexion.php")
         ?>
-         <div class="container-fluid" style="margin-left:10%;">
+        <div class="container-fluid" style="margin-left:10%;">
             <div class="container">
                 <div class="row">
                     <article class="col-md-4">
@@ -21,8 +21,10 @@ include("../View/View_accueil_stealmarket2.php")
             </div>
             <?php while($a = $articles->fetch()) { ?>
                 <div style="width:400px; float:left;">
-                    <a href="View_article.php?ID=<?= $a['ID'] ?>" style="float:left;"><?= $a['articles'] ?></a><br>
-                    <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" />
+                <?= $a['articles'] ?><br>
+                    <a href="View_article.php?ID=<?= $a['ID'] ?>" style="float:left;">
+                    <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /></a>
+                    
                 </div>
             <?php } ?>
         </div>
