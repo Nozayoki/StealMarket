@@ -7,9 +7,9 @@ include("../View/View_accueil_stealmarket.php")
         <div class="container-fluid" style="margin-left:10%;">
             <div class="container">
                 <div class="row">
-                    <article class="col-md-4">
+                    <article class="col-md-6">
                     <p>
-                    <div class="titre" style="margin-left:70%;">            
+                    <div class="titre" style="margin-left:60%;">            
                     <h1>Homme</h1>
                     </div>
                     </p>
@@ -17,7 +17,7 @@ include("../View/View_accueil_stealmarket.php")
                 </div>
             </div>
             <?php while($a = $articles->fetch()) { ?>
-                <div style="width:400px; float:left;">
+                <div style="width:300px; float:left;">
                 <?= $a['articles'] ?><br>
                     <a href="View_article.php?ID=<?= $a['ID'] ?>" style="float:left;">
                     <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /></a>
