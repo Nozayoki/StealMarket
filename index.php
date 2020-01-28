@@ -11,6 +11,7 @@
         <?php 
                 if (isset($_GET["deco"])){
                     setcookie ("ID_connexion","",time()-3600,"/");
+                    unset($_COOKIE["ID_connexion"]);
                 } 
                 
         ?>
