@@ -41,6 +41,7 @@ include ("../Model/Modele_article.php")
             <textarea name="articles_titre" placeholder="nom de l'article"></textarea><br />
             <input type="text" name="articles_prix" placeholder="prix" /><br/>
             <input type="text" name="articles_stock" placeholder="quantité" /><br/>
+            <input type="text" name="articles_url" placeholder="URL" /><br/>
             <input type="file" name="miniature" /></br>
             <?php
             echo "<form method='POST' enctype='multipart/form-data'>
@@ -54,6 +55,7 @@ include ("../Model/Modele_article.php")
     }?>     <br>
             <input type="submit" name="ajouter"  value="Envoyer l'article" />
             <input type="submit" name="modifier" value="Modifier l'article" />
+            <input type="submit" name="ajouter_ali_express" value="Ajouter l'article" />
         </form>
         
         <br/>
