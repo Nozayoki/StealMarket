@@ -24,32 +24,32 @@
       <li class="nav-item active">
         <a class="nav-link" href="View_homme.php">Collection Homme<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_femme.php">Collection Femme</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_femme.php">Collection Femme<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_accessoire_bague.php">Bague</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_accessoire_bague.php">Bague<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_accessoire_boucle.php">Boucle</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_accessoire_boucle.php">Boucle<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_accessoire_collier.php">Collier</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_accessoire_collier.php">Collier<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_accessoire_montre.php">Montre</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_accessoire_montre.php">Montre<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_contact.html">En savoir plus</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_contact.html">En savoir plus<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_recherche.php">Recherche</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_recherche.php">Recherche<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_inscription_steal.php">Inscription</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_inscription_steal.php">Inscription<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="View_panier.php">Panier</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="View_panier.php">Panier<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
