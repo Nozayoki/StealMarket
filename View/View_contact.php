@@ -23,8 +23,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="View_femme.php">Collectioon Femme</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="View_accessoire.php">Accessoire</a>
+                <li>
+                <div class="dropdown">
+                <button class="btn btn-primary">Accessoire</button>
+                <div class="dropdown-content"> 
+                  <a href="View_accessoire_Bague.php">Bague</a></br>
+                  <a href="View_accessoire_boucle.php">Boucle d'oreille</a></br>
+                  <a href="View_accessoire_collier.php">Collier</a></br>
+                  <a href="View_accessoire_montre.php">Montre</a></br>
+                </div>
+                </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="View_contact.html">En savoir plus</a>
@@ -35,6 +43,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="View_inscription_steal.php">Inscription</a>
                   </li>
+                  <?php if (!isset($_COOKIE['ID_connexion'])){
+                    echo "<li class='nav-item active'>
+                    <a class='nav-link' href='View_inscription_steal.php'>Inscription<span class='sr-only'>(current)</span></a>
+                    </li>";
+                    echo "<li class='nav-item active'>
+                    <a class='nav-link' href='View_connexion.php'>Connexion<span class='sr-only'>(current)</span></a>
+                  </li>";}else {
+                    echo "<li class='nav-item active'>
+                    <a class='nav-link' href='View_gerer_son_compte.php'>Gerer son compte<span class='sr-only'>(current)</span></a>
+                    </li>";
+                    echo "<li class='nav-item active'>
+                    <a class='nav-link' href='../index.php?deco=co'>Deconnexion<span class='sr-only'>(current)</span></a>
+                  </li>";
+                  }
+                    ?>
                   <li class="nav-item">
                     <a class="nav-link" href="View_panier.php">Panier</a>
                   </li>

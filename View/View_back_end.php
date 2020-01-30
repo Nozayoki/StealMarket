@@ -3,6 +3,8 @@
 <html>
 
     <head>
+    <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../Css/styles.css" type="text/css" />     
     <LINK rel="stylesheet" type="text/css" href="default.css">
     </head>
 
@@ -89,6 +91,12 @@
                 <?php }?>
             </tbody>
         </table>
+        <h2>Ajout article :<h2>
+        </br>
+        <form method="POST" action="View_ajout_article.php">
+        <input type="submit" class="btn btn-primary" value="Ajouter Article">
+        </form>
+
     </body>
 
 </html>
