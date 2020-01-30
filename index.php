@@ -74,16 +74,6 @@
 <div class="jumbotron" class="center">
   <h1 class="display-3">INDUMENTIS</h1>
 </div>
-        <?php
-                if (isset($_COOKIE["ID_connexion"])){
-
-        echo "<a href='View/View_gerer_son_compte.php'>gérer son compte</a>";
-        echo "<form method='post' action='index.php' >
-                <input type='submit' value='se déconnecter' name='deco'>
-              </form>";    
-        }
-        
-        ?>
         <div class="center" >
         <a href="View/View_homme.php"><img src="View/Image/vetement_homme.jpg"></a>
     

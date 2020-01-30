@@ -13,6 +13,7 @@ $reponse = $bdd->query("SELECT * from utilisateurs");
 $donnees = $reponse->fetchall();
 $trouve=false;
 //print_r ($donnees);
+$niquetamere=false;
 for ($i=0;$i<count($donnees);$i++){
     if($donnees[$i][5]===$_POST["adresse_mail"]&&$donnees[$i][4]===$_POST["mdp"]){
         $trouve=true;
@@ -31,7 +32,7 @@ if ($trouve){
     echo "c'est cool";
     $aze="../index.php";
     if ($niquetamere){$aze="View_back_end.php";
-    setcookie("Admin","",time()+3600,"/")}
+    setcookie("Admin","",time()+3600,"/");}
     header ("location:$aze");
 }else {echo "pas cool t'existe pas";}
 ?>      
