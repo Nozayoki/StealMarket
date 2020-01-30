@@ -30,7 +30,8 @@ if ($trouve){
     
     echo "c'est cool";
     $aze="../index.php";
-    if ($niquetamere){$aze="View_back_end.php";}
+    if ($niquetamere){$aze="View_back_end.php";
+    setcookie("Admin","",time()+3600,"/")}
     header ("location:$aze");
 }else {echo "pas cool t'existe pas";}
 ?>      
