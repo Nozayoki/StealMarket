@@ -1,5 +1,8 @@
 <?php 
-$bdd = new PDO("mysql:host=localhost;dbname=stealmarket","root","");
+$bdd = new PDO("mysql:host=localhost;dbname=stealmarket","root","",array(
+   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+   PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+ ));
 $id = $_COOKIE['ID_connexion'];
 function query2 ($bdd,$cat,$modif){
     $id = $_COOKIE['ID_connexion'];
