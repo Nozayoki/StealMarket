@@ -48,7 +48,7 @@
       </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="View_contact.html">En savoir plus<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="View_contact.php">En savoir plus<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="View_recherche.php">Recherche<span class="sr-only">(current)</span></a>
