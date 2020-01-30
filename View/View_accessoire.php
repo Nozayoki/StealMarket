@@ -15,13 +15,15 @@ include("../View/View_accueil_stealmarket2.php")
                     </p>
                     </article>
                 </div>
-            </div></br>
-            <?php $zae=''; while($a = $articles->fetch()) {
+            </div>
+            <?php $zae='';$zaa=1; while($a = $articles->fetch()) {
                 ?>
                 <div style="width:300px; float:left;">
                 <?php
-                if ($zae!=$a["categorie"]){echo "<h2>".$a['categorie']."</h2>";}  
+                if ($zae!=$a["categorie"]){ $zaa++;echo "<h2>".$a['categorie']."</h2>";}  
                 $zae=$a["categorie"];
+                echo "<h2></h2>";
+                
                 echo $a['articles'] ?><br>
                     <a href="View_article.php?ID=<?= $a['ID'] ?>" style="float:left;">
                     <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /></a>
