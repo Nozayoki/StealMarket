@@ -27,7 +27,16 @@
       <li class="nav-item active">
         <a class="nav-link" href="View_femme.php">Collection Femme<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <div class="dropdown">
+      <button class="btn btn-primary">Accessoire</button>
+      <div class="dropdown-content">
+        <a href="View_accessoire_Bague.php">Bague</a></br>
+        <a href="View_accessoire_boucle.php">Boucle d'oreille</a></br>
+        <a href="View_accessoire_collier.php">Collier</a></br>
+        <a href="View_accessoire_montre.php">Montre</a></br>
+      </div>
+      </div>
+      <!--<li class="nav-item active">
         <a class="nav-link" href="View_accessoire_bague.php">Bague<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
@@ -38,7 +47,7 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="View_accessoire_montre.php">Montre<span class="sr-only">(current)</span></a>
-      </li>
+      </li> -->
       <li class="nav-item active">
         <a class="nav-link" href="View_recherche.php">Recherche<span class="sr-only">(current)</span></a>
       </li>
@@ -57,7 +66,7 @@
       </li>";
       echo "<li class='nav-item active'>
       <a class='nav-link' href='../index.php?deco=co'>Deconnexion<span class='sr-only'>(current)</span></a>
-    </li>";
+    </li>"; 
     }
       ?>
       <li class="nav-item active">
