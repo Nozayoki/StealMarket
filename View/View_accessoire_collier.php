@@ -23,7 +23,8 @@ include("../View/View_accueil_stealmarket2.php")
                 <div style="width:400px; float:left;">
                 <?= $a['articles'] ?><br>
                     <a href="View_article.php?ID=<?= $a['ID'] ?>" style="float:left;">
-                    <img src="miniatures/<?= $a['ID'] ?>.jpg" width="100" /></a>
+                    <?php if($a['src']=='nosrc' ){$src="miniatures/". $a['ID'];}else {$src=$a['src'];}?>
+                    <img src="<?php echo $src; ?>.jpg" width="100" /></a>
                     
                 </div>
             <?php } ?>
