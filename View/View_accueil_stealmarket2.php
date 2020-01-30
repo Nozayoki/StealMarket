@@ -9,7 +9,7 @@
             };
         </style>
         <link rel="stylesheet" href="../Bootstrap/bootstrap-3.4.1-dist/css/bootstrap.min.css" type="text/css" />
-        <link rel="stylesheet" href="../Css/style.css" type="text/css" />
+        <link rel="stylesheet" href="../Css/styles.css" type="text/css" />
     </head>
 
     <body>
