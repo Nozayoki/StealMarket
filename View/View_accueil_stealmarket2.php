@@ -13,6 +13,15 @@
     </head>
 
     <body>
+    <?php 
+                if (isset($_GET["deco"])){
+                    setcookie ("ID_connexion","",time()-3600,"/");
+                    unset($_COOKIE["ID_connexion"]);
+                    setcookie ("Admin","",time()-3600,"/");
+                    unset($_COOKIE["Admin"]);
+                } 
+                
+        ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="../index.php">INDUMENTIS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,14 +84,8 @@
     </ul>
   </div>
 
-</nav>
-        <?php
-                if (isset($_COOKIE["ID_connexion"])){
-
-        echo "<a href='View_gerer_son_compte.php'>gérer son compte</a>";}
-        ?>
-        
-            <p>
+</nav>    
+          <p>
                 <?php
                 /*if (!isset($_COOKIE["ID_connexion"])){
                 echo "<input type='radio' name='connexion' value='connexion' />

@@ -1,8 +1,10 @@
 <?php
             include ("../Model/Modele_gerer_son_compte.php")
         ?>
-
-<!Doctype html>
+<?php
+include("../View/View_accueil_stealmarket.php")
+?>
+<!--<!Doctype html>
 
 <html>
     <head>
@@ -41,7 +43,7 @@
       </li>
     </ul>
     </div>
-</nav>      
+</nav>     --> 
         <table border ="1">
 	        <thead>
 		        <tr>
