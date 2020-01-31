@@ -10,8 +10,11 @@ require("../Control/Control_function.php")
 if (isset($_POST["suppr"])){
     $abr=$_POST['abr'];
     $pom=$_POST['pom'];
+    $tot=$_POST['tot'];
+    $ID_utilisateur=$_POST["abc"];
     $bdd->query("DELETE FROM ligne_commandes WHERE ID_commandes ='$abr' AND ID_articles='$pom'");
-    //$bdd->query("UPDATE ")
+    $mlkj=select($bdd,'total','commandes','ID_utilisateurs='.$ID_utilisateur);
+    $bdd->query("UPDATE commandes set total=$mlkj-$tot where ID_utilisateurs=".$ID_utilisateur);
     
 }
 ?>
@@ -48,9 +51,9 @@ $donnees = $aaa -> fetchall();
                 
             $bg=$donnees[$i][1]/$prix;}
             if ($j==1){$bg=$prix;}
-            if ($j==2){$bg=$donnees[$i][1];}
+            if ($j==2){$bg=$donnees[$i][1]; $tot=$donnees[$i][1];}
             if ($j==3){$bg=select($bdd,'articles','articles','ID='.$donnees[$i][2]); $pom=$donnees[$i][2];}
-            if ($j==4){$bg="<form method='post'><input type='hidden' name='abr' value='$abg'><input type='hidden' name='pom' value='$pom'><input type='submit' name='suppr' value='Supprimer article'></form>";}
+            if ($j==4){$bg="<form method='post'><input type='hidden' name='abr' value='$abg'><input type='hidden' name='tot' value='$tot'><input type='hidden' name='abc' value='$ID_utilisateur'><input type='hidden' name='pom' value='$pom'><input type='submit' name='suppr' value='Supprimer article'></form>";}
                        
             /*echo "yo";*/
             echo "<td>".$bg."</td>";

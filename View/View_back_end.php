@@ -1,7 +1,7 @@
 <?php
-if (!isset($_COOKIE["Admin"])){
+/*if (!isset($_COOKIE["Admin"])){
     header("location:../index.php");
-}
+}*/
 ?>
 <!doctype>
 
@@ -15,7 +15,10 @@ if (!isset($_COOKIE["Admin"])){
 
     <body>
         <?php
-            $bdd = new PDO("mysql:host=localhost;dbname=stealmarket","root","");
+            $bdd = new PDO("mysql:host=localhost;dbname=stealmarket","root","",array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+              ));
             $reponse = $bdd->query('SELECT * FROM utilisateurs');
         ?>
         
