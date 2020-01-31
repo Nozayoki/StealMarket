@@ -1,7 +1,7 @@
 <?php
-if (!isset($_COOKIE["Admin"])){
-    header("location:../index.php");
-}
+//if (!isset($_COOKIE["Admin"])){
+//    header("location:../index.php");
+//}
 ?>
 <!doctype>
 
