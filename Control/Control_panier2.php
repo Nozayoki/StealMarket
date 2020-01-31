@@ -20,8 +20,8 @@ echo "<form action='View_panier.php' method='POST'>
         <input type='hidden' value='$abs' name='total'>
         <input type='hidden' value='$ID_utilisateur' name='ID_utilisateurs'>
         <input type='hidden' value='$abg' name='ID_commandes'>
-        <input type='submit' value='Payer'>";}
-        else {  
+        <input type='submit' value='Payer'></form>";}
+        else  {  
             echo "vous n'avez pas de panier<br><br>";
             echo "<a href='../index.php'><input type='button' value='Retour'> ";
         }}else {echo "vous n'êtes pas connecté";}
