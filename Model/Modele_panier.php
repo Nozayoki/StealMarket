@@ -7,6 +7,15 @@ $ID_utilisateur=$_COOKIE["ID_connexion"];
 require("../Control/Control_function.php")
 ?>
 <?php
+if (isset($_POST["suppr"])){
+    $abr=$_POST['abr'];
+    $pom=$_POST['pom'];
+    $bdd->query("DELETE FROM ligne_commandes WHERE ID_commandes ='$abr' AND ID_articles='$pom'");
+    //$bdd->query("UPDATE ")
+    
+}
+?>
+<?php
 //$abl=$bdd->query("SELECT ID FROM utilisateurs WHERE prenom ='$yu3' ");
 $abs=$bdd->query("SELECT * FROM commandes WHERE ID_utilisateurs ='$ID_utilisateur' ");
 $abs = $abs->fetchall();
@@ -26,19 +35,24 @@ $donnees = $aaa -> fetchall();
 //select($bdd,'articles','articles','ID='.$donnees[2]);
 //echo "yo";
     //$donnees = $reponse->fetchall();
-    echo "<table><tr><td>Nombre d'articles</td><td>prix unitaire</td><td>prix de la commande</td><td>nom de l'article</td>";
+    echo "<table><tr><td>Nombre d'articles</td><td>prix unitaire</td><td>prix de la commande</td><td>nom de l'article</td><td>retirer l'article</td>";
     for ($i=0;$i<count($donnees);$i++){
         echo "</tr><tr>";
-        for ($j=0;$j<(count($donnees[$i])/2);$j++){
-            $bg=$donnees[$i][$j];
+        for ($j=0;$j<(count($donnees[$i])/2)+1;$j++){
+            echo $j;
+            if ($j!==4){
+                echo "/";
+            $bg=$donnees[$i][$j];}
             if ($j==0){$prix=select($bdd,'prix','articles','ID='.$donnees[$i][2]);
+                echo "/$prix";
                 
             $bg=$donnees[$i][1]/$prix;}
             if ($j==1){$bg=$prix;}
             if ($j==2){$bg=$donnees[$i][1];}
-            if ($j==3){$bg=select($bdd,'articles','articles','ID='.$donnees[$i][2]);
+            if ($j==3){$bg=select($bdd,'articles','articles','ID='.$donnees[$i][2]); $pom=$donnees[$i][2];}
+            if ($j==4){$bg="<form method='post'><input type='hidden' name='abr' value='$abg'><input type='hidden' name='pom' value='$pom'><input type='submit' name='suppr' value='Supprimer article'></form>";}
                        
-            /*echo "yo";*/}
+            /*echo "yo";*/
             echo "<td>".$bg."</td>";
         }
     }

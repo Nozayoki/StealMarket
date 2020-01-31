@@ -14,7 +14,8 @@ include("../View/View_accueil_stealmarket.php")
 <body>
    <p>
    <h1><?= $contenu ?></h1>
-   <form method='POST'>
+   <?php if ($co){$action="";}else{echo "Vous n'êtes pas connecté"; $action="View_connexion.php" ;}?>
+   <form method='POST' action=<?php echo $action;?>  >
    </p>
    <?php if($articles['src']=='nosrc' ){$src="miniatures/". $articles['ID'];}else {$src=$articles['src'];}?>
                   <p>  <img src="<?php echo $src; ?>.jpg" width="100" /></p>
@@ -25,7 +26,7 @@ include("../View/View_accueil_stealmarket.php")
       }
       ?>
     <?php $azer=$_GET["ID"]; echo "<input type='hidden' name='ID' value='$azer'"?>>
-        <input type="submit" name="Panier" value="Ajouter Au Panier">
+        <input type="submit" name="Panier" value="Ajouter Au Panier"><?php if ($articles['stock']<=10){echo "Attention offre limitée plus que ".$articles['stock']." restants";} ?>
         </form>
    <form action='View_homme.php'>
    <input type='hidden' name='liste' value='on'>
